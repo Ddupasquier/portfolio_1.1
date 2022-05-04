@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nosifer&family=Permanent+Marker&display=swap');
+$indie: 'Indie Flower', cursive;
+$nosifer: 'Nosifer', cursive;
+$pmarker: 'Permanent Marker', cursive;
+$iceblue: rgb(0, 255, 255);
+
+body,
+html {
+  margin: 0;
+  height: 98.5vh;
+  background: url('../assets/2.png');
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+}
+
+body {
+  border-bottom: $iceblue 5px solid;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  z-index: 999;
+  right: 0;
+  border-top: rgb(255, 255, 0) 5px solid;
+  .logo {
+    margin: 0.7rem;
+    border: rgba(255, 192, 203, 0) solid;
+    height: fit-content;
+    float: left;
+    font-size: 2rem;
+    font-family: $nosifer;
+    color: #000000;
+    animation-name: showlogo;
+    animation-duration: 0.5s;
+  }
+  @keyframes showlogo {
+    0% {
+      position: relative;
+      left: -500px;
+      opacity: 0;
+    }
+    100% {
+      position: relative;
+      left: 0;
+      opacity: 1;
+    }
+  }
+  .links {
+    float: right;
+    border: rgba(0, 128, 0, 0) solid;
+    margin: 1rem;
+    width: 28rem;
+    // height: fit-content;
+    color: rgb(219, 219, 219);
+    font-weight: bold;
+    font-family: $nosifer;
+    .each-button {
+      color: rgb(0, 255, 255);
+      font-size: 1.4rem;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: black;
+      text-decoration: none;
+    }
+    .each-button:hover {
+      color: rgb(97, 255, 255);
+    }
+  }
+
+  @media only screen and (max-width: 968px) {
+    .links {
+      transform: rotate(90deg) translatex(30%) translatey(-540%);
+      position: relative;
+      top: -1.7rem;
+      z-index: -1000;
+    }
+  }
+
+  @media only screen and (max-width: 468px) {
+    .logo {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+#container {
+  border: rgba(255, 0, 0, 0) solid;
+  margin: -2rem auto 0 auto;
+  width: 80%;
+  height: 80vh;
+  overflow-y: auto;
+  #projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+    a {
+      width: 20em;
+      height: 26vh;
+      margin: auto;
+      box-shadow: 5px 5px 10px black;
+      cursor: pointer;
+      div {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  #projects .simplestyleimg {
+    position: relative;
+    animation-name: child1;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes child1 {
+    0% {
+      transform: translatex(100px) translatey(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0px) translatey(0px);
+      opacity: 1;
+    }
+  }
+
+  #projects .pokedeximg {
+    position: relative;
+    animation-name: child2;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes child2 {
+    0% {
+      transform: translatex(100px) translatey(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0px) translatey(0px);
+      opacity: 1;
+    }
+  }
+
+  #projects .nationalparkimg {
+    position: relative;
+    animation-name: child3;
+    animation-duration: 0.5s;
+  }
+
+  @keyframes child3 {
+    0% {
+      transform: translatex(-100px) translatey(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0px) translatey(0px);
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 948px) {
+  #container {
+    position: relative;
+    top: -5vh;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 40%;
+  padding: 0 1rem 0 1rem;
+  text-align: right;
+  background: grey;
+  border-left: rgb(0, 255, 255) solid 7px;
+  color: white;
+  span {
+    cursor: default;
+  }
+  button {
+    float: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+  }
+  .footer-arrow {
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding-top: 3px;
+    width: 100%;
+    font-size: 0.8rem;
+    background: linear-gradient(
+      0.25turn,
+      #ffffff00 15%,
+      rgb(150, 150, 150) 50%,
+      #ffffff00 85%
+    );
+  }
+  .footer-arrow:hover {
+    background: linear-gradient(
+      0.25turn,
+      #ffffff00 15%,
+      rgb(173, 173, 173) 50%,
+      #ffffff00 85%
+    );
+  }
+  .linkedin {
+    position: relative;
+    top: -0.7rem;
+  }
+  .linkedin:hover,
+  .linkedin:focus {
+    color: rgb(64, 168, 216);
+  }
+  .linkedin:active {
+    color: rgb(55, 192, 255);
+  }
+  .github {
+    position: relative;
+    left: -0.2rem;
+  }
+  .github:hover,
+  .github:focus {
+    color: rgb(175, 175, 175);
+  }
+  .github:active {
+    color: rgb(199, 199, 199);
+  }
+  .email {
+    position: relative;
+    top: 0.7rem;
+    right: 0.6rem;
+  }
+  .email:hover,
+  .email:focus {
+    color: rgb(255, 255, 255);
+  }
+  .email:active {
+    color: rgb(182, 182, 182);
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  footer {
+    width: 100%;
+    .email {
+      position: relative;
+      top: 0;
+      left: 2%;
+    }
+    .github {
+      position: relative;
+      top: 0;
+      left: 2%;
+    }
+    .linkedin {
+      position: relative;
+      top: 0;
+      left: 2%;
+    }
+  }
+}
+
+.open-animation {
+  padding-bottom: 0.5rem;
+  animation-name: open;
+  animation-duration: 1s;
+}
+@keyframes open {
+  0% {
+    bottom: -10.5%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
