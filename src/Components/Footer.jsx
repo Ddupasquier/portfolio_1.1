@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import * as SiIcon from 'react-icons/si';
 import * as AiIcon from 'react-icons/ai';
-// import ButtonMailTo from './ButtonMailTo';
-import { Link } from 'react-router-dom';
 
 function Footer() {
   const [show, setShow] = useState(true);
@@ -47,10 +45,6 @@ function Footer() {
           >
             <AiIcon.AiOutlineGithub />
           </button>
-          {/* <ButtonMailTo
-            label={<AiIcon.AiOutlineMail />}
-            mailto='mailto:dylandupasquier@gmail.com'
-          /> */}
           <button
             type='button'
             to='#'
