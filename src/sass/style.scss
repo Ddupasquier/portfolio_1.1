@@ -7,7 +7,7 @@ $iceblue: rgb(0, 255, 255);
 body,
 html {
   margin: 0;
-  height: 100vh;
+  // height: 100vh;
   background: url('../assets/2.png');
   background-repeat: no-repeat;
   background-position: 50% 40%;
@@ -21,7 +21,7 @@ nav {
   padding-top: 1%;
   top: 0;
   right: 0;
-  border-top: rgb(255, 255, 0) 5px solid;
+  // border-top: rgb(255, 255, 0) 5px solid;
   .logo {
     margin-left: 0.7rem;
     border: rgba(255, 192, 203, 0) solid;
@@ -84,20 +84,23 @@ nav {
 }
 
 #container {
-  border: rgba(255, 0, 0, 0) solid;
-  margin: 8vh auto 0 auto;
-  width: 99%;
-  height: fit-content;
+  position: relative;
+  // border: rgb(0, 255, 13) solid;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95vw;
+  height: 90vh;
   padding-bottom: 2rem;
-  overflow-y: auto;
   #projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
     width: 90%;
-    padding-top: 4%;
+    padding-top: 6vh;
     gap: 2em;
+    overflow-y: auto;
     a {
       width: 20em;
       height: 26vh;
@@ -167,11 +170,10 @@ nav {
 
   #about {
     background: rgba(255, 255, 255, 0.856);
-    margin: auto;
-    margin-top: 1rem;
-    width: 60%;
-    max-height: 70vh;
-    padding: 1.5rem;
+    border: pink solid;
+    margin: 10% 10% 10% 10%;
+    padding: 0 1.5rem 0 1.5rem;
+    max-height: 80%;
     border-radius: 8px;
     box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
     overflow-y: auto;
