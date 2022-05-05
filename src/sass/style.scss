@@ -83,7 +83,7 @@ nav {
   border: rgba(255, 0, 0, 0) solid;
   margin: -2rem auto 0 auto;
   width: 99%;
-  height: 80vh;
+  height: fit-content;
   overflow-y: auto;
   #projects {
     display: flex;

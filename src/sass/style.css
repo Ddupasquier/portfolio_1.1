@@ -92,7 +92,9 @@ nav .links .each-button:hover {
   border: rgba(255, 0, 0, 0) solid;
   margin: -2rem auto 0 auto;
   width: 99%;
-  height: 80vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow-y: auto;
 }
 #container #projects {
