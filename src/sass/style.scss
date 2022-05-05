@@ -7,14 +7,10 @@ $iceblue: rgb(0, 255, 255);
 body,
 html {
   margin: 0;
-  height: 98.5vh;
+  height: 100vh;
   background: url('../assets/2.png');
   background-repeat: no-repeat;
   background-position: 50% 40%;
-}
-
-body {
-  border-bottom: $iceblue 5px solid;
 }
 
 nav {
@@ -52,7 +48,6 @@ nav {
     border: rgba(0, 128, 0, 0) solid;
     margin: 1rem;
     width: 28rem;
-    // height: fit-content;
     color: rgb(219, 219, 219);
     font-weight: bold;
     font-family: $nosifer;
@@ -87,14 +82,15 @@ nav {
 #container {
   border: rgba(255, 0, 0, 0) solid;
   margin: -2rem auto 0 auto;
-  width: 80%;
+  width: 99%;
   height: 80vh;
   overflow-y: auto;
   #projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    margin: auto;
+    width: 90%;
     gap: 2em;
     a {
       width: 20em;
@@ -160,6 +156,19 @@ nav {
     100% {
       transform: translatex(0px) translatey(0px);
       opacity: 1;
+    }
+  }
+
+  #about {
+    background: rgba(255, 255, 255, 0.856);
+    margin: auto;
+    margin-top: 1rem;
+    width: 80%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.61);
+    p {
+      text-indent: 3rem;
     }
   }
 }

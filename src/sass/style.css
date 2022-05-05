@@ -2,14 +2,10 @@
 body,
 html {
   margin: 0;
-  height: 98.5vh;
+  height: 100vh;
   background: url("../assets/2.png");
   background-repeat: no-repeat;
   background-position: 50% 40%;
-}
-
-body {
-  border-bottom: aqua 5px solid;
 }
 
 nav {
@@ -95,7 +91,7 @@ nav .links .each-button:hover {
 #container {
   border: rgba(255, 0, 0, 0) solid;
   margin: -2rem auto 0 auto;
-  width: 80%;
+  width: 99%;
   height: 80vh;
   overflow-y: auto;
 }
@@ -103,7 +99,8 @@ nav .links .each-button:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  margin: auto;
+  width: 90%;
   gap: 2em;
 }
 #container #projects a {
@@ -200,6 +197,18 @@ nav .links .each-button:hover {
     transform: translatex(0px) translatey(0px);
     opacity: 1;
   }
+}
+#container #about {
+  background: rgba(255, 255, 255, 0.856);
+  margin: auto;
+  margin-top: 1rem;
+  width: 80%;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 6px 8px 15px rgba(0, 0, 0, 0.61);
+}
+#container #about p {
+  text-indent: 3rem;
 }
 
 @media only screen and (max-width: 948px) {

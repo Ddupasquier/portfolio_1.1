@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import * as SiIcon from 'react-icons/si';
 import * as AiIcon from 'react-icons/ai';
+// import ButtonMailTo from './ButtonMailTo';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const [show, setShow] = useState(true);
@@ -8,10 +10,10 @@ function Footer() {
   return (
     <div>
       {show === true ? (
-        <footer className="open-animation">
+        <footer className='open-animation'>
           <button
-            type="button"
-            className="footer-arrow"
+            type='button'
+            className='footer-arrow'
             onClick={() => {
               setShow(false);
             }}
@@ -24,21 +26,47 @@ function Footer() {
           <span>Copyright 2022 | All Rights Reserved</span>
           <br />
           <span>Artwork by Jacob Smutko</span>
-          <button type="button" className="linkedin">
+          <button
+            type='button'
+            className='linkedin'
+            onClick={() => {
+              window.open(
+                'https://www.linkedin.com/in/dylan-dupasquier/',
+                '_blank'
+              );
+            }}
+          >
             <SiIcon.SiLinkedin />
           </button>
-          <button type="button" className="github">
+          <button
+            type='button'
+            className='github'
+            onClick={() => {
+              window.open('https://github.com/Ddupasquier', '_blank');
+            }}
+          >
             <AiIcon.AiOutlineGithub />
           </button>
-          <button type="button" className="email">
+          {/* <ButtonMailTo
+            label={<AiIcon.AiOutlineMail />}
+            mailto='mailto:dylandupasquier@gmail.com'
+          /> */}
+          <button
+            type='button'
+            to='#'
+            className='email'
+            onClick={() =>
+              (window.location = 'mailto:dylandupasquier@gmail.com')
+            }
+          >
             <AiIcon.AiOutlineMail />
           </button>
         </footer>
       ) : (
         <footer>
           <button
-            type="button"
-            className="footer-arrow"
+            type='button'
+            className='footer-arrow'
             onClick={() => {
               setShow(true);
             }}
