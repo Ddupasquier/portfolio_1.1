@@ -71,7 +71,7 @@ nav {
       transform: rotate(90deg) translatex(30%) translatey(-540%);
       position: relative;
       top: 10vh;
-      right: 8vw;
+      right: 4vw;
       z-index: -1000;
     }
   }
@@ -98,9 +98,9 @@ nav {
     flex-wrap: wrap;
     margin: auto;
     width: 90%;
+    height: fit-content;
     padding-top: 6vh;
     gap: 2em;
-    overflow-y: auto;
     a {
       width: 20em;
       height: 26vh;
@@ -180,6 +180,21 @@ nav {
     p {
       text-indent: 3rem;
     }
+  }
+
+  #about::-webkit-scrollbar {
+    width: 0.3em;
+  }
+
+  #about::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  #about::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 8px;
   }
 }
 
