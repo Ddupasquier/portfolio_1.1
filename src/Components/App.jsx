@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import '../sass/style.css';
 import Navigation from './Navigation';
 import Container from './Container';
