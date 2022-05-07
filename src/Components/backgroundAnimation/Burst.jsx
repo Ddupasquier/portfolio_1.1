@@ -1,21 +1,16 @@
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
-const ParticlesBg = () => {
+const Burst = () => {
   const particlesInit = async (main) => {
     console.log(main);
     await loadFull(main);
-  };
-
-  const particlesLoaded = (container) => {
-    console.log(container);
   };
 
   return (
     <Particles
       id='tsparticles'
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         background: {
           color: {
@@ -27,20 +22,28 @@ const ParticlesBg = () => {
           events: {
             onClick: {
               enable: true,
-              mode: 'push',
+              mode: ['push'],
             },
             onHover: {
               enable: true,
-              mode: 'repulse',
+              mode: ['bubble', 'repulse'],
             },
             resize: true,
           },
           modes: {
             push: {
-              quantity: 40,
+              quantity: 20,
+              duration: 1,
+            },
+            bubble: {
+              opacity: 0.8,
+              size: 50,
+              color: {
+                value: '#30D5C8',
+              },
             },
             repulse: {
-              distance: 200,
+              distance: 150,
               duration: 100,
             },
           },
@@ -49,21 +52,22 @@ const ParticlesBg = () => {
           color: {
             value: '#000000',
           },
-          links: {
-            color: '#ff0000',
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
+          // links: {
+          //   color: '#ff0000',
+          //   distance: 150,
+          //   enable: true,
+          //   opacity: 0.5,
+          //   width: 1,
+          // },
           collisions: {
             enable: true,
           },
+          // This determines the movement of the elements that are floating on sceen
           move: {
             direction: 'none',
             enable: true,
             outModes: {
-              default: 'bounce',
+              default: 'none',
             },
             random: false,
             speed: 0.2,
@@ -74,8 +78,8 @@ const ParticlesBg = () => {
               enable: true,
               area: 800,
             },
-            value: 80,
             // number of circles on page load
+            value: 0,
           },
           opacity: {
             value: 0.5,
@@ -84,7 +88,7 @@ const ParticlesBg = () => {
             type: 'circle',
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 25 },
           },
         },
         detectRetina: true,
@@ -93,4 +97,4 @@ const ParticlesBg = () => {
   );
 };
 
-export default ParticlesBg;
+export default Burst;
