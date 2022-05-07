@@ -75,7 +75,7 @@ const ParticlesBg = () => {
               area: 800,
             },
             value: 80,
-            // number of circles on page
+            // number of circles on page load
           },
           opacity: {
             value: 0.5,
