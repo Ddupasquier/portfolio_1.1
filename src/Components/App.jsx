@@ -1,22 +1,28 @@
+import React, { useState, useCallback, useRef } from 'react';
 import '../sass/style.css';
 import Navigation from './Navigation';
 import Container from './Container';
 import Footer from './Footer';
 import BG from './backgroundAnimation/BG';
 
+const colors = ['#FFFFFF', '#0000FF', '#00FF00', '#FFFF00'];
+
 function App() {
-  const colors = ['red', 'blue', 'green', 'yellow'];
-  let i = 0;
+  let [colorIndex, setColorIndex] = useState(0);
+  const stateRef = useRef();
+  stateRef.colorIndex = colorIndex;
 
   function changeBg() {
-    i <= colors.length ? i++ : (i = 0);
-    document.body.style.backgroundColor = colors[i];
+    const newIdx = (stateRef.colorIndex + 1) % colors.length;
+    console.log(newIdx);
+    setColorIndex(newIdx);
   }
-  // use inline style for background color and set bg color using state
 
+  const newChangeBg = useCallback(changeBg, []);
+  
   return (
-    <div className='App' onClick={changeBg}>
-      <BG />
+    <div className='App'>
+      <BG changeBg={newChangeBg} color={colors[colorIndex]} />
       <Navigation />
       <Container />
       <Footer />
