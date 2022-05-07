@@ -37,7 +37,7 @@ const ParticlesBg = () => {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 40,
             },
             repulse: {
               distance: 200,
@@ -66,7 +66,7 @@ const ParticlesBg = () => {
               default: 'bounce',
             },
             random: false,
-            speed: .2,
+            speed: 0.2,
             straight: false,
           },
           number: {
@@ -75,6 +75,7 @@ const ParticlesBg = () => {
               area: 800,
             },
             value: 80,
+            // number of circles on page
           },
           opacity: {
             value: 0.5,
