@@ -1,31 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navigation() {
-  const contact = ['c', 'o', 'n', 't', 'a', 'c', 't'];
-  const about = ['a', 'b', 'o', 'u', 't'];
-  const projects = ['p', 'r', 'o', 'j', 'e', 'c', 't', 's'];
+function Navigation({ color }) {
+  const linkStyle = { color: color, filter: 'brightness(200)' };
 
   const links = [
-    <Link to="/" className="each-button" key="1">
-      {about}
+    <Link to='/' className='each-button' key='1' style={linkStyle}>
+      About
     </Link>,
     ' | ',
-    <Link to="/projects" className="each-button" key="2">
-      {projects}
+    <Link to='/projects' className='each-button' key='2' style={linkStyle}>
+      Projects
     </Link>,
     ' | ',
-    <Link to="contact" className="each-button" key="3">
-      {contact}
+    <Link to='contact' className='each-button' key='3' style={linkStyle}>
+      Contact
     </Link>,
   ];
 
   return (
     <nav>
-      <div className="logo">Dylan Dupasquier</div>
-      <div className="links">
-        {links}
-      </div>
+      <div className='logo'>Dylan Dupasquier</div>
+      <div className='links'>{links}</div>
     </nav>
   );
 }

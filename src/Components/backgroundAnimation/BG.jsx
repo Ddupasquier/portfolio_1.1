@@ -5,7 +5,7 @@ function BG({changeBg, color}) {
   return (
     <>
       <BackgroundColor color={color}/>
-      <Burst changeBg={changeBg}/>
+      <Burst changeBg={changeBg} color={color}/>
     </>
   );
 }

@@ -4,14 +4,17 @@ import { loadFull } from 'tsparticles';
 
 const Burst = ({ changeBg }) => {
   const particlesInit = async (main) => {
-    console.log('Particles init called!');
+    // console.log('Particles init called!');
     await loadFull(main);
   };
 
   const particlesLoaded = (container) => {
-    console.log('Particles Loaded');
-    container.addClickHandler((e) => {
+    // console.log('Particles Loaded');
+    container.addClickHandler(() => {
       changeBg();
+      // setTimeout(() => {
+      //   changeBg();
+      // }, 1000);
     });
   };
 
@@ -31,7 +34,7 @@ const Burst = ({ changeBg }) => {
               },
               onHover: {
                 enable: true,
-                mode: ['bubble', 'repulse'],
+                mode: ['repulse'],
               },
               resize: true,
             },
@@ -40,13 +43,13 @@ const Burst = ({ changeBg }) => {
                 quantity: 20,
                 duration: 1,
               },
-              bubble: {
-                opacity: 0.8,
-                size: 50,
-                color: {
-                  value: '#30D5C8',
-                },
-              },
+              // bubble: {
+              //   opacity: 0.8,
+              //   size: 50,
+              //   color: {
+              //     value: '#30D5C8',
+              //   },
+              // },
               repulse: {
                 distance: 150,
                 duration: 100,
@@ -54,20 +57,24 @@ const Burst = ({ changeBg }) => {
             },
           },
           particles: {
+            // life: {
+            //   count: 1,
+            //   duration: {
+            //     value: {
+            //       min: 1,
+            //       max: 2,
+            //     },
+            //   },
+            // },
+
             color: {
               value: '#000000',
             },
-            // links: {
-            //   color: '#ff0000',
-            //   distance: 150,
-            //   enable: true,
-            //   opacity: 0.5,
-            //   width: 1,
-            // },
             collisions: {
               enable: true,
             },
-            // This determines the movement of the elements that are floating on sceen
+            // This determines the movement of the elements that are floating on 
+            // screen
             move: {
               direction: 'none',
               enable: true,
@@ -88,12 +95,31 @@ const Burst = ({ changeBg }) => {
             },
             opacity: {
               value: 0.5,
+              animation: {
+                enable: true,
+                speed: 6,
+                minimumValue: 0.1,
+                sync: false,
+                startValue: 'max',
+                destroy: 'min',
+              },
             },
             shape: {
-              type: 'circle',
+              type: ['circle'],
             },
+            // to get back to burst animation bool:false animations within 
+            // opacity and size and change max size value to 25
             size: {
-              value: { min: 1, max: 25 },
+              value: { min: 1, max: 2000 },
+              // value: 4000,
+              animation: {
+                enable: true,
+                speed: 400,
+                minimumValue: 0.1,
+                sync: false,
+                startValue: 'min',
+                // destroy: 'max',
+              },
             },
           },
           detectRetina: true,

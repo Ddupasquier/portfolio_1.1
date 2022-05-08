@@ -1,31 +1,40 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState } from 'react';
 import '../sass/style.css';
 import Navigation from './Navigation';
 import Container from './Container';
 import Footer from './Footer';
 import BG from './backgroundAnimation/BG';
 
-const colors = ['#FFFFFF', '#0000FF', '#00FF00', '#FFFF00'];
+const COLORS = [
+  '#680000',
+  '#683000',
+  '#685300',
+  '#516800',
+  '#2C6800',
+  '#026800',
+  '#00684F',
+  '#005168',
+  '#003268',
+  '#001168',
+  '#1B0068',
+  '#450068',
+  '#680062',
+  '#68003C',
+  '#680019',
+];
+
+const nextColorIndex = prevIndex => (prevIndex + 1) % COLORS.length;
 
 function App() {
-  let [colorIndex, setColorIndex] = useState(0);
-  const stateRef = useRef();
-  stateRef.colorIndex = colorIndex;
+  const [colorIndex, setColorIndex] = useState(7);
+  const changeBg = () => setColorIndex(nextColorIndex);
 
-  function changeBg() {
-    const newIdx = (stateRef.colorIndex + 1) % colors.length;
-    console.log(newIdx);
-    setColorIndex(newIdx);
-  }
-
-  const newChangeBg = useCallback(changeBg, []);
-  
   return (
     <div className='App'>
-      <BG changeBg={newChangeBg} color={colors[colorIndex]} />
-      <Navigation />
+      <BG changeBg={changeBg} color={COLORS[colorIndex]} />
+      <Navigation color={COLORS[colorIndex]} />
       <Container />
-      <Footer />
+      <Footer color={COLORS[colorIndex]}/>
     </div>
   );
 }
