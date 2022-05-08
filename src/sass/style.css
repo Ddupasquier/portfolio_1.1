@@ -78,6 +78,9 @@ nav .links .each-button {
   font-size: 1.4rem;
   text-decoration: none;
 }
+nav .links .each-button:hover {
+  color: rgba(255, 255, 255, 0.534);
+}
 @media only screen and (max-width: 968px) {
   nav .links {
     transform: rotate(90deg) translatex(30%) translatey(-540%);
@@ -233,6 +236,98 @@ nav .links .each-button {
 #container #about::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 8px;
+}
+
+#contact {
+  background: rgba(255, 255, 255, 0.856);
+  margin: 10% 10% 10% 10%;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
+  overflow-y: auto;
+}
+#contact h3 {
+  text-align: center;
+}
+#contact #social-links {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+#contact #social-links button {
+  background: none;
+  border: none;
+  font-size: 5vw;
+  cursor: pointer;
+}
+#contact #social-links button:hover {
+  color: grey;
+}
+#contact #social-links button:active {
+  color: #a7a7a7;
+}
+@media only screen and (max-width: 750px) {
+  #contact #social-links {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+#contact .form-login2 {
+  background-image: url("https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  height: 50vh;
+  width: 80%;
+  color: black;
+  padding: 1.1%;
+  margin: 0 auto 2% auto;
+  text-align: center;
+}
+#contact .form-login2 form {
+  background: rgba(255, 255, 255, 0.603);
+  border-radius: 3px;
+  margin: 2% 2% 2% 2%;
+  height: 95%;
+}
+#contact .form-login2 form input,
+#contact .form-login2 form textarea {
+  margin: 0.25rem auto 0 auto;
+  width: 80%;
+}
+#contact .form-login2 form textarea {
+  max-width: 90%;
+  max-height: 60%;
+}
+#contact .form-login2 form .btn19 {
+  margin-top: 0.25rem;
+  border-radius: 100rem;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem;
+  color: black;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 4px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(50deg, #00ff62, #7700ff);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+}
+#contact .form-login2 form .btn19:hover {
+  box-shadow: none;
+  color: white;
+}
+#contact .form-login2 form .btn19:active {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, #00ff62, #7700ff);
+}
+@media only screen and (max-width: 484px) {
+  #contact .form-login2 {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 948px) {
