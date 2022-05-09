@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navigation({ color }) {
-  const linkStyle = { color: color, filter: 'brightness(200)' };
+  const linkStyle = { color: color, filter: 'brightness(150)' };
 
   const links = [
     <Link to='/' className='each-button' key='1' style={linkStyle}>

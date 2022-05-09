@@ -204,13 +204,14 @@ nav {
 }
 
 #contact {
-  background: rgba(255, 255, 255, 0.856);
+  background: rgba(0, 0, 0, 0.582);
   margin: 10% 10% 10% 10%;
   padding: 0 1.5rem 1.5rem 1.5rem;
   max-height: 80%;
   border-radius: 8px;
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
+  color: white;
   h3 {
     text-align: center;
   }
@@ -224,6 +225,7 @@ nav {
       border: none;
       font-size: 5vw;
       cursor: pointer;
+      color: white;
     }
     button:hover {
       color: grey;
