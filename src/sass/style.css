@@ -73,6 +73,10 @@ nav .links {
   color: #dbdbdb;
   font-weight: bold;
   font-family: "Nosifer", cursive;
+  border: rgba(255, 255, 255, 0) solid;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 nav .links .each-button {
   font-size: 1.4rem;
@@ -86,7 +90,7 @@ nav .links .each-button:hover {
     transform: rotate(90deg) translatex(30%) translatey(-540%);
     position: relative;
     top: 10vh;
-    right: 4vw;
+    right: 25px;
     z-index: -1000;
   }
 }
@@ -331,6 +335,11 @@ nav .links .each-button:hover {
   }
 }
 
+@media only screen and (max-width: 281px) {
+  #container {
+    margin-top: 8vh;
+  }
+}
 footer {
   position: fixed;
   bottom: 0;
