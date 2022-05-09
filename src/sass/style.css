@@ -100,7 +100,6 @@ nav .links .each-button:hover {
 
 #container {
   position: relative;
-  border: rgba(0, 255, 13, 0) solid;
   margin-left: auto;
   margin-right: auto;
   width: 95vw;
@@ -295,9 +294,11 @@ nav .links .each-button:hover {
 }
 #container #about {
   background: rgba(255, 255, 255, 0.856);
-  margin: 10% 10% 10% 10%;
   padding: 0 1.5rem 0 1.5rem;
+  margin: auto;
+  margin-top: 8%;
   max-height: 80%;
+  width: 80%;
   border-radius: 8px;
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
@@ -305,24 +306,14 @@ nav .links .each-button:hover {
 #container #about p {
   text-indent: 3rem;
 }
-#container #about::-webkit-scrollbar {
-  width: 0.3em;
-}
-#container #about::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-}
-#container #about::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  border-radius: 8px;
-}
 
 #contact {
-  background: rgba(0, 0, 0, 0.582);
-  margin: 10% 10% 10% 10%;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.548);
+  padding: 0 1.5rem 0 1.5rem;
+  margin: auto;
+  margin-top: 8%;
   max-height: 80%;
+  width: 80%;
   border-radius: 8px;
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
@@ -344,7 +335,7 @@ nav .links .each-button:hover {
 #contact #social-links button {
   background: none;
   border: none;
-  font-size: 5vw;
+  font-size: 3.5vw;
   cursor: pointer;
   color: white;
 }
@@ -365,7 +356,7 @@ nav .links .each-button:hover {
   background-position: center;
   background-size: cover;
   border-radius: 8px;
-  height: 45vh;
+  height: 40%;
   width: 80%;
   color: black;
   padding: 1.1%;
@@ -528,5 +519,19 @@ footer .email:active {
   100% {
     bottom: 0;
   }
+}
+::-webkit-scrollbar {
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 8px;
 }
 /*# sourceMappingURL=style.css.map */
