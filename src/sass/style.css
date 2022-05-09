@@ -118,7 +118,7 @@ nav .links .each-button:hover {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-top: 6vh;
+  padding-top: 12vh;
   gap: 2em;
 }
 #container #projects a {
@@ -288,7 +288,7 @@ nav .links .each-button:hover {
   background-position: center;
   background-size: cover;
   border-radius: 8px;
-  height: 50vh;
+  height: 45vh;
   width: 80%;
   color: black;
   padding: 1.1%;
