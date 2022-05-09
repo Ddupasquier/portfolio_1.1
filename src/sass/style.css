@@ -10,9 +10,6 @@
 body,
 html {
   margin: 0;
-  background: url("../assets/2.png");
-  background-repeat: no-repeat;
-  background-position: 50% 40%;
 }
 
 nav {
@@ -123,7 +120,7 @@ nav .links .each-button:hover {
 }
 #container #projects a {
   position: relative;
-  width: 35%;
+  width: 30%;
   aspect-ratio: 4/3;
   margin: auto;
   box-shadow: 5px 5px 10px black;
