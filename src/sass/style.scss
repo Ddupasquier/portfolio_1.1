@@ -113,13 +113,69 @@ nav {
       margin: auto;
       box-shadow: 5px 5px 10px black;
       cursor: pointer;
-      div {
+      text-decoration: none;
+      .proj-title {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 1.3em;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.61);
+        display: none;
+      }
+      .proj-img {
         width: 100%;
         height: 100%;
         background-position: top left;
         background-size: cover;
         background-repeat: no-repeat;
       }
+      .proj-img:hover > .proj-title {
+        display: block;
+        animation-name: showtitle;
+        animation-duration: 0.5s;
+      }
+      .proj-tech {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: fit-content;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.61);
+        display: none;
+      }
+      .proj-img:hover > .proj-title {
+        display: block;
+        animation-name: showtitle;
+        animation-duration: 1s;
+      }
+      .proj-img:hover > .proj-tech {
+        display: block;
+        animation-name: showtech;
+        animation-duration: 1s;
+      }
+    }
+  }
+
+  @keyframes showtitle {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes showtech {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
@@ -176,7 +232,6 @@ nav {
 
   #about {
     background: rgba(255, 255, 255, 0.856);
-    // border: pink solid;
     margin: 10% 10% 10% 10%;
     padding: 0 1.5rem 0 1.5rem;
     max-height: 80%;

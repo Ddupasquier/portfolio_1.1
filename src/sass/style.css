@@ -126,13 +126,91 @@ nav .links .each-button:hover {
   margin: auto;
   box-shadow: 5px 5px 10px black;
   cursor: pointer;
+  text-decoration: none;
 }
-#container #projects a div {
+#container #projects a .proj-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1.3em;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.61);
+  display: none;
+}
+#container #projects a .proj-img {
   width: 100%;
   height: 100%;
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#container #projects a .proj-img:hover > .proj-title {
+  display: block;
+  -webkit-animation-name: showtitle;
+          animation-name: showtitle;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+#container #projects a .proj-tech {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.61);
+  display: none;
+}
+#container #projects a .proj-img:hover > .proj-title {
+  display: block;
+  -webkit-animation-name: showtitle;
+          animation-name: showtitle;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+#container #projects a .proj-img:hover > .proj-tech {
+  display: block;
+  -webkit-animation-name: showtech;
+          animation-name: showtech;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+@-webkit-keyframes showtitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showtitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showtech {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showtech {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #container #projects .simplestyleimg {
   position: relative;
