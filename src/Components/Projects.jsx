@@ -12,12 +12,12 @@ function Projects() {
   const [nationalParkBg, setNationalParkBg] = useState(NationalParksPause);
 
   return (
-    <div id='projects'>
+    <div id="projects">
       <a
-        href='https://simplestyles.herokuapp.com/'
-        target='_blank'
-        rel='noreferrer'
-        className='simplestyleimg'
+        href="https://simplestyles.herokuapp.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="simplestyleimg"
       >
         <div
           style={{ backgroundImage: `url(${simpleStyleBg})` }}
@@ -25,20 +25,20 @@ function Projects() {
           onFocus={() => setSimpleStyleBg(SimpleStyles)}
           onMouseOut={() => setSimpleStyleBg(SimpleStylesPause)}
           onBlur={() => setSimpleStyleBg(SimpleStylesPause)}
-          className='proj-img'
+          className="proj-img"
         >
-          <div className='proj-title'>SIMPLE STYLES</div>
-          <div className='proj-tech'>
+          <div className="proj-title">SIMPLE STYLES</div>
+          <div className="proj-tech">
             TECH: React.js, Ruby on Rails, CSS, HTML5, BCrypt
           </div>
         </div>
       </a>
 
       <a
-        href='https://pokedex-fi.herokuapp.com/'
-        target='_blank'
-        rel='noreferrer'
-        className='pokedeximg'
+        href="https://pokedex-fi.herokuapp.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="pokedeximg"
       >
         <div
           style={{ backgroundImage: `url(${pokedexBg})` }}
@@ -46,17 +46,17 @@ function Projects() {
           onFocus={() => setPokedexBg(Pokedex)}
           onMouseOut={() => setPokedexBg(PokedexPause)}
           onBlur={() => setPokedexBg(PokedexPause)}
-          className='proj-img'
+          className="proj-img"
         >
-          <div className='proj-title'>Poke'Dex</div>
-          <div className='proj-tech'>TECH: VanillaJs, Html5, CSS</div>
+          <div className="proj-title">PokeDex</div>
+          <div className="proj-tech">TECH: VanillaJs, Html5, CSS</div>
         </div>
       </a>
       <a
-        href='https://national-parks-fi.herokuapp.com/'
-        target='_blank'
-        rel='noreferrer'
-        className='nationalparkimg'
+        href="https://national-parks-fi.herokuapp.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="nationalparkimg"
       >
         <div
           style={{ backgroundImage: `url(${nationalParkBg})` }}
@@ -64,10 +64,10 @@ function Projects() {
           onFocus={() => setNationalParkBg(NationalParks)}
           onMouseOut={() => setNationalParkBg(NationalParksPause)}
           onBlur={() => setNationalParkBg(NationalParksPause)}
-          className='proj-img'
+          className="proj-img"
         >
-          <div className='proj-title'>National Parks</div>
-          <div className='proj-tech'>
+          <div className="proj-title">National Parks</div>
+          <div className="proj-tech">
             TECH: React.js, Ruby on Rails, CSS, HTML5, BCrypt
           </div>
         </div>

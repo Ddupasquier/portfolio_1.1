@@ -16,13 +16,14 @@ function ContactForm() {
   const onSubmit = (e) => {
     e.preventDefault();
     send(serviceID, templateID, toSend, userID)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+      .then(() => {
+        // eslint-disable-next-line no-alert
+        alert("Thanks for the email! I'll get back to you as soon as possible.");
       })
       .catch((err) => {
-        console.log('FAILED...', err);
+        // eslint-disable-next-line no-alert
+        alert('Your email failed to send', err);
       });
-    alert("Thanks for the email! I'll get back to you as soon as possible.");
   };
 
   const handleChange = (e) => {
@@ -30,39 +31,41 @@ function ContactForm() {
   };
 
   return (
-    <div className='form-login2'>
+    <div className="form-login2">
       <form onSubmit={onSubmit}>
         <input
-          type='text'
-          name='from_name'
-          placeholder='Your name'
+          type="text"
+          name="from_name"
+          placeholder="Your name"
           value={toSend.from_name}
           onChange={handleChange}
         />
         <input
-          type='text'
-          name='reply_to'
-          placeholder='Your email'
+          type="text"
+          name="reply_to"
+          placeholder="Your email"
           value={toSend.reply_to}
           onChange={handleChange}
         />
         <input
-          type='text'
-          name='to_name'
-          placeholder='dylandupasquier@gmail.com'
+          type="text"
+          name="to_name"
+          placeholder="dylandupasquier@gmail.com"
           value={toSend.to_name}
           onChange={handleChange}
-        /><br />
+        />
+        <br />
         <textarea
-          type='text'
-          name='message'
-          placeholder='Your message'
+          type="text"
+          name="message"
+          placeholder="Your message"
           value={toSend.message}
           onChange={handleChange}
           className="message"
-        /><br />
+        />
+        <br />
 
-        <button type='submit' className='btn19'>
+        <button type="submit" className="btn19">
           SEND
         </button>
       </form>

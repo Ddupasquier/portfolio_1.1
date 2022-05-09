@@ -1,8 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 function Home() {
   return (
-    <div id='about'>
+    <div id="about">
       <h3>Hi, I'm Dylan Dupasquier</h3>
       <h4>Full-Stack React & Ruby on Rails Software Developer</h4>
       <p>
@@ -17,7 +18,8 @@ function Home() {
         turpis egestas maecenas pharetra convallis posuere morbi leo urna. Eu
         lobortis elementum nibh tellus molestie nunc. Id velit ut tortor
         pretium. Velit aliquet sagittis id consectetur purus ut faucibus
-        pulvinar. Faucibus in ornare quam viverra orci.{' '}
+        pulvinar. Faucibus in ornare quam viverra orci.
+        {' '}
       </p>
       <p>
         Iaculis at erat pellentesque adipiscing commodo elit at imperdiet.

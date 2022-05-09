@@ -23,18 +23,18 @@ const COLORS = [
   '#680019',
 ];
 
-const nextColorIndex = prevIndex => (prevIndex + 1) % COLORS.length;
+const nextColorIndex = (prevIndex) => (prevIndex + 1) % COLORS.length;
 
 function App() {
   const [colorIndex, setColorIndex] = useState(7);
   const changeBg = () => setColorIndex(nextColorIndex);
 
   return (
-    <div className='App'>
+    <div className="App">
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Navigation color={COLORS[colorIndex]} />
       <Container />
-      <Footer color={COLORS[colorIndex]}/>
+      <Footer color={COLORS[colorIndex]} />
     </div>
   );
 }

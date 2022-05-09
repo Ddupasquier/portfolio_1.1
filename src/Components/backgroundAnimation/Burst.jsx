@@ -1,15 +1,14 @@
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
+import PropTypes from 'prop-types';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 
 const Burst = ({ changeBg }) => {
   const particlesInit = async (main) => {
-    // console.log('Particles init called!');
     await loadFull(main);
   };
 
   const particlesLoaded = (container) => {
-    // console.log('Particles Loaded');
     container.addClickHandler(() => {
       changeBg();
       // setTimeout(() => {
@@ -21,7 +20,7 @@ const Burst = ({ changeBg }) => {
   return useMemo(
     () => (
       <Particles
-        id='tsparticles'
+        id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
@@ -73,7 +72,7 @@ const Burst = ({ changeBg }) => {
             collisions: {
               enable: true,
             },
-            // This determines the movement of the elements that are floating on 
+            // This determines the movement of the elements that are floating on
             // screen
             move: {
               direction: 'none',
@@ -107,7 +106,7 @@ const Burst = ({ changeBg }) => {
             shape: {
               type: ['circle'],
             },
-            // to get back to burst animation bool:false animations within 
+            // to get back to burst animation bool:false animations within
             // opacity and size and change max size value to 25
             size: {
               value: { min: 1, max: 2000 },
@@ -126,9 +125,13 @@ const Burst = ({ changeBg }) => {
         }}
       />
     ),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
+    [],
   );
+};
+
+Burst.propTypes = {
+  // eslint-disable-next-line react/require-default-props
+  changeBg: PropTypes.func,
 };
 
 export default Burst;
