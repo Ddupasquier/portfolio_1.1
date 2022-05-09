@@ -121,7 +121,7 @@ nav .links .each-button:hover {
 }
 #container #projects a {
   position: relative;
-  width: 30%;
+  width: 20em;
   aspect-ratio: 4/3;
   margin: auto;
   box-shadow: 5px 5px 10px black;
