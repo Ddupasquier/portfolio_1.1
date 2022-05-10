@@ -2,12 +2,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import * as AiIcon from 'react-icons/ai';
-import * as DiIcon from 'react-icons/di';
 import Photo1 from '../assets/personalphoto1.jpg';
 import Photo2 from '../assets/climbing.jpg';
 import Photo3 from '../assets/bierschtadt.jpg';
 import Resume from '../assets/Dylan Dupasquier-Resume-Revised-4-28.pdf';
 import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
+import TechIcons from './TechIcons';
 
 function Home() {
   return (
@@ -39,19 +39,7 @@ function Home() {
         <i>Full-Stack React & Ruby on Rails Software Developer</i>
       </h4>
       <div className="tech-icons">
-        <DiIcon.DiReact title="React" />
-        <DiIcon.DiGithubBadge title="GitHub" />
-        <DiIcon.DiCss3 title="CSS3" />
-        <DiIcon.DiSass title="SCSS/Sass" />
-        <DiIcon.DiHtml5 title="HTML5" />
-        <DiIcon.DiJsBadge title="JavaScript" />
-        <DiIcon.DiLinux title="Linux" />
-        <DiIcon.DiUbuntu title="Ubuntu" />
-        <DiIcon.DiVisualstudio title="VSCode" />
-        <DiIcon.DiHeroku title="Heroku" />
-        <DiIcon.DiPostgresql title="PostGresql" />
-        <DiIcon.DiRuby title="Ruby on Rails" />
-        <DiIcon.DiStackoverflow title="StackOverflow" />
+        <TechIcons />
       </div>
       <section>
         <div className="img-left">
@@ -98,23 +86,10 @@ function Home() {
           my latest wood working project.
         </p>
       </section>
+      <br />
       <section>
         <h1>
-          Tech:
-          <DiIcon.DiReact />
-          <DiIcon.DiGithubBadge />
-          <DiIcon.DiCss3 />
-          <DiIcon.DiSass />
-          <DiIcon.DiHtml5 />
-          <DiIcon.DiJsBadge />
-          <DiIcon.DiLinux />
-          <DiIcon.DiUbuntu />
-          <DiIcon.DiVisualstudio />
-          <DiIcon.DiHeroku />
-          <DiIcon.DiPostgresql />
-          <DiIcon.DiRuby />
-          <DiIcon.DiUbuntu />
-          <DiIcon.DiStackoverflow />
+          <TechIcons />
         </h1>
       </section>
       <br />
