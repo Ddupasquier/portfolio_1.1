@@ -2,6 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import * as AiIcon from 'react-icons/ai';
+import * as DiIcon from 'react-icons/di';
 import Photo1 from '../assets/personalphoto1.jpg';
 import Photo2 from '../assets/climbing.jpg';
 import Photo3 from '../assets/bierschtadt.jpg';
@@ -12,13 +13,13 @@ function Home() {
   return (
     <div id="about">
       <header>
-        <h3>Hi, I'm Dylan Dupasquier</h3>
+        <span>Hi, I'm Dylan Dupasquier</span>
         <div id="resume">
           <a href={Resume} download>
             <AiIcon.AiFillFilePdf />
           </a>
           <br />
-          <a href={Resume} className="resume-link" download>
+          <a className="resume-link" href={Resume} download>
             Download
           </a>{' '}
           |{' '}
@@ -33,9 +34,25 @@ function Home() {
         </div>
         <br />
       </header>
+      <br />
       <h4>
         <i>Full-Stack React & Ruby on Rails Software Developer</i>
       </h4>
+      <div className="tech-icons">
+        <DiIcon.DiReact title="React" />
+        <DiIcon.DiGithubBadge title="GitHub" />
+        <DiIcon.DiCss3 title="CSS3" />
+        <DiIcon.DiSass title="SCSS/Sass" />
+        <DiIcon.DiHtml5 title="HTML5" />
+        <DiIcon.DiJsBadge title="JavaScript" />
+        <DiIcon.DiLinux title="Linux" />
+        <DiIcon.DiUbuntu title="Ubuntu" />
+        <DiIcon.DiVisualstudio title="VSCode" />
+        <DiIcon.DiHeroku title="Heroku" />
+        <DiIcon.DiPostgresql title="PostGresql" />
+        <DiIcon.DiRuby title="Ruby on Rails" />
+        <DiIcon.DiStackoverflow title="StackOverflow" />
+      </div>
       <section>
         <div className="img-left">
           <img src={Photo1} alt="linkedin" />
@@ -51,7 +68,7 @@ function Home() {
             Flatiron
           </a>{' '}
           School's Software Engineering bootcamp will allow me to make excellent
-          contributions to the world of tech software development and computer
+          contributions to the world of tech, software development, and computer
           science.
         </p>
         <p>
@@ -63,8 +80,10 @@ function Home() {
           which is consistently being updated with new content, as well as a
           contact section if you would like to contact me.
         </p>
+        <br />
       </section>
       <hr />
+      <br />
       <section>
         <img src={Photo3} alt="bierschtadt" className="img-right" />
         <p>
@@ -80,7 +99,23 @@ function Home() {
         </p>
       </section>
       <section>
-        <h1>Tech: </h1>
+        <h1>
+          Tech:
+          <DiIcon.DiReact />
+          <DiIcon.DiGithubBadge />
+          <DiIcon.DiCss3 />
+          <DiIcon.DiSass />
+          <DiIcon.DiHtml5 />
+          <DiIcon.DiJsBadge />
+          <DiIcon.DiLinux />
+          <DiIcon.DiUbuntu />
+          <DiIcon.DiVisualstudio />
+          <DiIcon.DiHeroku />
+          <DiIcon.DiPostgresql />
+          <DiIcon.DiRuby />
+          <DiIcon.DiUbuntu />
+          <DiIcon.DiStackoverflow />
+        </h1>
       </section>
       <br />
     </div>

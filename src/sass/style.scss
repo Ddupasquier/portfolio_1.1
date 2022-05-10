@@ -253,6 +253,11 @@ nav {
       width: 65%;
       border-top: black solid 1px;
     }
+    .tech-icons {
+      width: 100%;
+      text-align: center;
+      font-size: 4vw;
+    }
     .img-left {
       float: left;
       margin-right: 1rem;
@@ -293,7 +298,9 @@ nav {
           font-size: 0.6rem;
         }
       }
-      h3 {
+      span {
+        margin: 1rem;
+        font-size: 2rem;
         font-family: $pmarker;
         float: left;
       }

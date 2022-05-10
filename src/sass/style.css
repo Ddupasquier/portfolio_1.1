@@ -316,6 +316,11 @@ nav .links .each-button:hover {
   width: 65%;
   border-top: black solid 1px;
 }
+#container #about .tech-icons {
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+}
 #container #about .img-left {
   float: left;
   margin-right: 1rem;
@@ -361,7 +366,9 @@ nav .links .each-button:hover {
   color: black;
   font-size: 0.6rem;
 }
-#container #about header h3 {
+#container #about header span {
+  margin: 1rem;
+  font-size: 2rem;
   font-family: "Permanent Marker", cursive;
   float: left;
 }
