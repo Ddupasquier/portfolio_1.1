@@ -3,6 +3,7 @@ body,
 html {
   margin: 0;
   height: 100%;
+  overflow-y: hidden;
 }
 
 .change-bg {
@@ -88,13 +89,18 @@ nav .links .each-button:hover {
     transform: rotate(90deg) translatex(30%) translatey(-540%);
     position: relative;
     top: 10vh;
-    right: 25px;
+    right: 20px;
     z-index: -1000;
   }
 }
 @media only screen and (max-width: 468px) {
   nav .logo {
     font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  nav .logo {
+    font-size: 5vw;
   }
 }
 
@@ -293,8 +299,8 @@ nav .links .each-button:hover {
   }
 }
 #container #about {
-  background: rgba(255, 255, 255, 0.856);
-  padding: 0 1.5rem 0 1.5rem;
+  background: rgba(255, 255, 255, 0.699);
+  padding: 0 1.5rem 2rem 1.5rem;
   margin: auto;
   margin-top: 8%;
   max-height: 80%;
@@ -303,8 +309,64 @@ nav .links .each-button:hover {
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
 }
+#container #about h4 {
+  text-align: center;
+}
+#container #about hr {
+  width: 65%;
+  border-top: black solid 1px;
+}
+#container #about .img-left {
+  float: left;
+  margin-right: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 40%;
+  aspect-ratio: 4.5/3;
+}
+#container #about .img-left img {
+  max-width: 50%;
+  min-height: 100%;
+}
+#container #about .img-right {
+  float: right;
+  margin-left: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 40%;
+  aspect-ratio: 4.5/3;
+}
 #container #about p {
+  text-align: justify;
   text-indent: 3rem;
+}
+#container #about header {
+  margin-bottom: 80px;
+}
+#container #about header #resume {
+  float: right;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+}
+#container #about header #resume a {
+  font-size: 2rem;
+  color: red;
+}
+#container #about header #resume .resume-link {
+  color: black;
+  font-size: 0.6rem;
+}
+#container #about header h3 {
+  font-family: "Permanent Marker", cursive;
+  float: left;
+}
+#container #about header a:hover {
+  color: #830000;
 }
 
 #contact {
@@ -332,17 +394,20 @@ nav .links .each-button:hover {
   height: fit-content;
   text-align: center;
 }
-#contact #social-links button {
+#contact #social-links button,
+#contact #social-links a {
   background: none;
   border: none;
   font-size: 3.5vw;
   cursor: pointer;
   color: white;
 }
-#contact #social-links button:hover {
+#contact #social-links button:hover,
+#contact #social-links a:hover {
   color: grey;
 }
-#contact #social-links button:active {
+#contact #social-links button:active,
+#contact #social-links a:active {
   color: #a7a7a7;
 }
 @media only screen and (max-width: 750px) {

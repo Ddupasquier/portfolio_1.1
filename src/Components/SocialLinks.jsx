@@ -1,6 +1,7 @@
 import React from 'react';
 import * as SiIcon from 'react-icons/si';
 import * as AiIcon from 'react-icons/ai';
+import Resume from '../assets/Dylan Dupasquier-Resume-Revised-4-28.pdf';
 
 function SocialLinks() {
   return (
@@ -26,6 +27,9 @@ function SocialLinks() {
       >
         <AiIcon.AiOutlineGithub />
       </button>
+      <a href={Resume} download>
+        <AiIcon.AiFillFilePdf />
+      </a>
     </div>
   );
 }

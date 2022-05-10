@@ -1,65 +1,88 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import * as AiIcon from 'react-icons/ai';
+import Photo1 from '../assets/personalphoto1.jpg';
+import Photo2 from '../assets/climbing.jpg';
+import Photo3 from '../assets/bierschtadt.jpg';
+import Resume from '../assets/Dylan Dupasquier-Resume-Revised-4-28.pdf';
+import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
 
 function Home() {
   return (
     <div id="about">
-      <h3>Hi, I'm Dylan Dupasquier</h3>
-      <h4>Full-Stack React & Ruby on Rails Software Developer</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Velit sed
-        ullamcorper morbi tincidunt ornare. Massa tempor nec feugiat nisl
-        pretium fusce id velit ut. Sit amet facilisis magna etiam tempor orci
-        eu. A lacus vestibulum sed arcu non odio euismod lacinia. Adipiscing
-        tristique risus nec feugiat in. Risus pretium quam vulputate dignissim.
-        Congue mauris rhoncus aenean vel elit scelerisque. Nulla facilisi nullam
-        vehicula ipsum a arcu cursus vitae. Pretium aenean pharetra magna ac. Ac
-        turpis egestas maecenas pharetra convallis posuere morbi leo urna. Eu
-        lobortis elementum nibh tellus molestie nunc. Id velit ut tortor
-        pretium. Velit aliquet sagittis id consectetur purus ut faucibus
-        pulvinar. Faucibus in ornare quam viverra orci.
-        {' '}
-      </p>
-      <p>
-        Iaculis at erat pellentesque adipiscing commodo elit at imperdiet.
-        Fringilla ut morbi tincidunt augue interdum velit euismod. Egestas
-        egestas fringilla phasellus faucibus scelerisque eleifend. Vivamus arcu
-        felis bibendum ut tristique et egestas quis ipsum. Sit amet purus
-        gravida quis blandit. Pharetra diam sit amet nisl suscipit adipiscing.
-        Egestas pretium aenean pharetra magna. Mattis aliquam faucibus purus in
-        massa tempor nec. Laoreet suspendisse interdum consectetur libero id
-        faucibus nisl tincidunt eget. Risus pretium quam vulputate dignissim
-        suspendisse. Nunc mattis enim ut tellus. Sollicitudin ac orci phasellus
-        egestas. Id faucibus nisl tincidunt eget nullam. Sit amet aliquam id
-        diam maecenas ultricies mi. Turpis massa sed elementum tempus egestas
-        sed sed risus pretium. Cursus vitae congue mauris rhoncus aenean vel.
-        Cras semper auctor neque vitae tempus quam pellentesque.
-      </p>
-      <p>
-        {' '}
-        A diam sollicitudin tempor id eu nisl. Ut consequat semper viverra nam.
-        Diam sollicitudin tempor id eu nisl nunc mi ipsum. Lobortis scelerisque
-        fermentum dui faucibus in ornare quam viverra orci. Pellentesque
-        habitant morbi tristique senectus et netus. Amet porttitor eget dolor
-        morbi non arcu risus.
-      </p>
-      <p>
-        {' '}
-        A diam sollicitudin tempor id eu nisl. Ut consequat semper viverra nam.
-        Diam sollicitudin tempor id eu nisl nunc mi ipsum. Lobortis scelerisque
-        fermentum dui faucibus in ornare quam viverra orci. Pellentesque
-        habitant morbi tristique senectus et netus. Amet porttitor eget dolor
-        morbi non arcu risus.
-      </p>
-      <p>
-        {' '}
-        A diam sollicitudin tempor id eu nisl. Ut consequat semper viverra nam.
-        Diam sollicitudin tempor id eu nisl nunc mi ipsum. Lobortis scelerisque
-        fermentum dui faucibus in ornare quam viverra orci. Pellentesque
-        habitant morbi tristique senectus et netus. Amet porttitor eget dolor
-        morbi non arcu risus.
-      </p>
+      <header>
+        <h3>Hi, I'm Dylan Dupasquier</h3>
+        <div id="resume">
+          <a href={Resume} download>
+            <AiIcon.AiFillFilePdf />
+          </a>
+          <br />
+          <a href={Resume} className="resume-link" download>
+            Download
+          </a>{' '}
+          |{' '}
+          <a
+            href={Resume}
+            className="resume-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View
+          </a>
+        </div>
+        <br />
+      </header>
+      <h4>
+        <i>Full-Stack React & Ruby on Rails Software Developer</i>
+      </h4>
+      <section>
+        <div className="img-left">
+          <img src={Photo1} alt="linkedin" />
+          <img src={Photo2} alt="climbing" />
+        </div>
+        <p>
+          Full Stack Software Developer with ten years of experience in areas of
+          carpentry, plumbing and electrical work. This work has prepared me to
+          excel in a tech environment that requires creative, constructive, and
+          critical thinking skills. My experience doing hands-on work combined
+          with the technical skills acquired at{' '}
+          <a href={FlatCert} target="_blank" rel="noopener noreferrer">
+            Flatiron
+          </a>{' '}
+          School's Software Engineering bootcamp will allow me to make excellent
+          contributions to the world of tech software development and computer
+          science.
+        </p>
+        <p>
+          I am proficient in building full-scale websites using React and Ruby
+          on Rails. I'm a full-stack, junior level developer with a preference
+          towards the front-end. At the top-right of this segment there is a
+          link where you can download and view my resume. Included on this page
+          is a collection of personal projects that I've worked on recently,
+          which is consistently being updated with new content, as well as a
+          contact section if you would like to contact me.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <img src={Photo3} alt="bierschtadt" className="img-right" />
+        <p>
+          Since the moment I delved into the world of computers by learning to
+          customize MySpace themes as a child, a fascination with computer
+          science has stayed with me, and now that passion carries me through
+          every project I get to work on.
+        </p>
+        <p>
+          When my eyes aren't glued to a computer screen, you can find me
+          outside rock climbing, hiking, gardening, or in the garage working on
+          my latest wood working project.
+        </p>
+      </section>
+      <section>
+        <h1>Tech: </h1>
+      </section>
+      <br />
     </div>
   );
 }
