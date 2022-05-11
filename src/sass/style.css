@@ -93,6 +93,11 @@ nav .links .each-button:hover {
     z-index: -1000;
   }
 }
+@media only screen and (max-width: 450px) {
+  nav .links {
+    font-size: 1vw;
+  }
+}
 @media only screen and (max-width: 468px) {
   nav .logo {
     font-size: 1.5rem;
@@ -301,7 +306,7 @@ nav .links .each-button:hover {
 #container #about {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 5rem auto;
+  grid-template-rows: 6rem auto;
   background: rgba(255, 255, 255, 0.699);
   padding: 0 1.5rem 0 1.5rem;
   margin: auto;
@@ -333,6 +338,11 @@ nav .links .each-button:hover {
   font-family: "Permanent Marker", cursive;
   float: left;
 }
+@media only screen and (max-width: 360px) {
+  #container #about .name {
+    display: none;
+  }
+}
 #container #about .resume > #pdf {
   float: right;
   margin-top: 1rem;
@@ -349,7 +359,7 @@ nav .links .each-button:hover {
 }
 #container #about .resume > #pdf a {
   text-decoration: none;
-  font-size: 2.2rem;
+  font-size: 3.5vw;
   color: black;
 }
 #container #about .resume > #pdf a:hover {
@@ -434,12 +444,6 @@ nav .links .each-button:hover {
 #contact #social-links a:active {
   color: #a7a7a7;
 }
-@media only screen and (max-width: 750px) {
-  #contact #social-links {
-    margin-left: 0;
-    width: 100%;
-  }
-}
 #contact .form-login2 {
   background-image: url("https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg");
   background-position: center;
@@ -492,11 +496,6 @@ nav .links .each-button:hover {
   }
 }
 
-@media only screen and (max-width: 281px) {
-  #container {
-    margin-top: 8vh;
-  }
-}
 ::-webkit-scrollbar {
   width: 0.3em;
 }

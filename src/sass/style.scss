@@ -83,6 +83,14 @@ nav {
     }
   }
 
+
+  // **************************work on this***************************************
+  @media only screen and (max-width: 450px) {
+    .links {
+      font-size: 1vw;
+    }
+  }
+
   @media only screen and (max-width: 468px) {
     .logo {
       font-size: 1.5rem;
@@ -239,7 +247,7 @@ nav {
   #about {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 5rem auto;
+    grid-template-rows: 6rem auto;
     background: rgba(255, 255, 255, 0.699);
     padding: 0 1.5rem 0 1.5rem;
     margin: auto;
@@ -273,6 +281,13 @@ nav {
       }
     }
 
+    // *********************media query**************************
+    @media only screen and (max-width: 360px) {
+      .name {
+        display: none;
+      }
+    }
+
     .resume > #pdf {
       float: right;
       margin-top: 1rem;
@@ -284,7 +299,7 @@ nav {
       border-radius: 5px;
       a {
         text-decoration: none;
-        font-size: 2.2rem;
+        font-size: 3.5vw;
         color: rgb(0, 0, 0);
       }
       a:hover {
@@ -364,12 +379,7 @@ nav {
       color: rgb(167, 167, 167);
     }
   }
-  @media only screen and (max-width: 750px) {
-    #social-links {
-      margin-left: 0;
-      width: 100%;
-    }
-  }
+
   .form-login2 {
     background-image: url('https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg');
     background-position: center;
@@ -432,12 +442,6 @@ nav {
     .form-login2 {
       width: 100%;
     }
-  }
-}
-
-@media only screen and (max-width: 281px) {
-  #container {
-    margin-top: 8vh;
   }
 }
 
