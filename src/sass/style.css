@@ -298,9 +298,6 @@ nav .links .each-button:hover {
     opacity: 1;
   }
 }
-#container #about > div {
-  border: black solid;
-}
 #container #about {
   display: grid;
   grid-template-columns: auto auto;
