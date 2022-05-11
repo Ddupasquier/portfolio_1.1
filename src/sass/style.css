@@ -298,30 +298,79 @@ nav .links .each-button:hover {
     opacity: 1;
   }
 }
+#container #about > div {
+  border: black solid;
+}
 #container #about {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 5rem auto;
   background: rgba(255, 255, 255, 0.699);
-  padding: 0 1.5rem 2rem 1.5rem;
+  padding: 0 1.5rem 0 1.5rem;
   margin: auto;
   margin-top: 8%;
   max-height: 80%;
   width: 80%;
   border-radius: 8px;
+  border: black solid;
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
 }
-#container #about h4 {
-  text-align: center;
+#container #about footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;
+  background: grey;
+  color: white;
+}
+#container #about footer span {
+  cursor: default;
 }
 #container #about hr {
   width: 65%;
   border-top: black solid 1px;
 }
-#container #about .tech-icons {
+#container #about .name span {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-family: "Permanent Marker", cursive;
+  float: left;
+}
+#container #about .resume > #pdf {
+  float: right;
+  margin-top: 1rem;
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+}
+#container #about .resume > #pdf a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: black;
+}
+#container #about .resume > #pdf a:hover {
+  color: #cccccc;
+}
+#container #about .content {
+  grid-column: span 2;
+}
+#container #about .content h4 {
+  text-align: center;
+}
+#container #about .content .tech-icons {
   width: 100%;
   text-align: center;
   font-size: 4vw;
 }
-#container #about .img-left {
+#container #about .content .img-left {
   float: left;
   margin-right: 1rem;
   height: -webkit-fit-content;
@@ -330,11 +379,11 @@ nav .links .each-button:hover {
   width: 40%;
   aspect-ratio: 4.5/3;
 }
-#container #about .img-left img {
+#container #about .content .img-left img {
   max-width: 50%;
   min-height: 100%;
 }
-#container #about .img-right {
+#container #about .content .img-right {
   float: right;
   margin-left: 1rem;
   height: -webkit-fit-content;
@@ -343,37 +392,9 @@ nav .links .each-button:hover {
   width: 40%;
   aspect-ratio: 4.5/3;
 }
-#container #about p {
+#container #about .content p {
   text-align: justify;
   text-indent: 3rem;
-}
-#container #about header {
-  margin-bottom: 80px;
-}
-#container #about header #resume {
-  float: right;
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  background: white;
-  border-radius: 5px;
-}
-#container #about header #resume a {
-  font-size: 2rem;
-  color: red;
-}
-#container #about header #resume .resume-link {
-  color: black;
-  font-size: 0.6rem;
-}
-#container #about header span {
-  margin: 1rem;
-  font-size: 2rem;
-  font-family: "Permanent Marker", cursive;
-  float: left;
-}
-#container #about header a:hover {
-  color: #830000;
 }
 
 #contact {
@@ -478,118 +499,6 @@ nav .links .each-button:hover {
 @media only screen and (max-width: 281px) {
   #container {
     margin-top: 8vh;
-  }
-}
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 40%;
-  padding: 0 1rem 0 1rem;
-  text-align: right;
-  background: grey;
-  color: white;
-}
-footer span {
-  cursor: default;
-}
-footer button {
-  float: left;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 1.7rem;
-}
-footer .footer-arrow {
-  position: relative;
-  top: 0;
-  margin: 0;
-  padding-top: 3px;
-  width: 100%;
-  font-size: 0.8rem;
-  background: linear-gradient(0.25turn, #ffffff00 15%, #969696 50%, #ffffff00 85%);
-}
-footer .footer-arrow:hover {
-  background: linear-gradient(0.25turn, #ffffff00 15%, #adadad 50%, #ffffff00 85%);
-}
-footer .linkedin {
-  position: relative;
-  top: -0.7rem;
-}
-footer .linkedin:hover,
-footer .linkedin:focus {
-  color: #40a8d8;
-}
-footer .linkedin:active {
-  color: #37c0ff;
-}
-footer .github {
-  position: relative;
-  left: -0.2rem;
-}
-footer .github:hover,
-footer .github:focus {
-  color: #afafaf;
-}
-footer .github:active {
-  color: #c7c7c7;
-}
-footer .email {
-  position: relative;
-  top: 0.7rem;
-  right: 0.6rem;
-}
-footer .email:hover,
-footer .email:focus {
-  color: white;
-}
-footer .email:active {
-  color: #b6b6b6;
-}
-
-@media only screen and (max-width: 795px) {
-  footer {
-    width: 100%;
-  }
-  footer .email {
-    position: relative;
-    top: 0;
-    left: 3%;
-  }
-  footer .github {
-    position: relative;
-    top: 0;
-    left: 3%;
-  }
-  footer .linkedin {
-    position: relative;
-    top: 0;
-    left: 3%;
-  }
-}
-.open-animation {
-  padding-bottom: 0.5rem;
-  -webkit-animation-name: open;
-          animation-name: open;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-@-webkit-keyframes open {
-  0% {
-    bottom: -10.5%;
-  }
-  100% {
-    bottom: 0;
-  }
-}
-
-@keyframes open {
-  0% {
-    bottom: -10.5%;
-  }
-  100% {
-    bottom: 0;
   }
 }
 ::-webkit-scrollbar {

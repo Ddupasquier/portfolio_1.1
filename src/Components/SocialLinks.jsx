@@ -6,28 +6,23 @@ import Resume from '../assets/Dylan Dupasquier-Resume-Revised-4-28.pdf';
 function SocialLinks() {
   return (
     <div id="social-links">
-      <button
-        type="button"
+      <a
+        href="https://www.linkedin.com/in/dylan-dupasquier/"
+        target="_blank"
         className="linkedin"
-        onClick={() => {
-          window.open(
-            'https://www.linkedin.com/in/dylan-dupasquier/',
-            '_blank',
-          );
-        }}
+        rel="noreferrer"
       >
         <SiIcon.SiLinkedin />
-      </button>
-      <button
-        type="button"
-        className="github"
-        onClick={() => {
-          window.open('https://github.com/Ddupasquier', '_blank');
-        }}
+      </a>
+      <a
+        href="https://github.com/Ddupasquier"
+        target="_blank"
+        className="linkedin"
+        rel="noreferrer"
       >
         <AiIcon.AiOutlineGithub />
-      </button>
-      <a href={Resume} download>
+      </a>
+      <a href={Resume} target="_blank" rel="noopener noreferrer">
         <AiIcon.AiFillFilePdf />
       </a>
     </div>

@@ -236,77 +236,98 @@ nav {
     }
   }
 
+  #about > div {
+    border: black solid;
+  }
+
   #about {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 5rem auto;
     background: rgba(255, 255, 255, 0.699);
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
     margin: auto;
     margin-top: 8%;
     max-height: 80%;
     width: 80%;
     border-radius: 8px;
+    border: black solid;
     box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
     overflow-y: auto;
-    h4 {
-      text-align: center;
+    footer {
+      position: static;
+      bottom: 0;
+      width: 100%;
+      height: 4.5rem;
+      background: grey;
+      color: white;
+      span {
+        cursor: default;
+      }
     }
     hr {
       width: 65%;
       border-top: black solid 1px;
     }
-    .tech-icons {
-      width: 100%;
-      text-align: center;
-      font-size: 4vw;
-    }
-    .img-left {
-      float: left;
-      margin-right: 1rem;
-      height: fit-content;
-      width: 40%;
-      aspect-ratio: 4.5 / 3;
-      img {
-        max-width: 50%;
-        min-height: 100%;
-      }
-    }
-    .img-right {
-      float: right;
-      margin-left: 1rem;
-      height: fit-content;
-      width: 40%;
-      aspect-ratio: 4.5 / 3;
-    }
-    p {
-      text-align: justify;
-      text-indent: 3rem;
-    }
-    header {
-      margin-bottom: 80px;
-      #resume {
-        float: right;
-        margin: 1rem;
-        padding: 1rem;
-        text-align: center;
-        background: white;
-        border-radius: 5px;
-        a {
-          font-size: 2rem;
-          color: red;
-        }
-        .resume-link {
-          color: black;
-          font-size: 0.6rem;
-        }
-      }
+    .name {
       span {
-        margin: 1rem;
+        margin-top: 1rem;
         font-size: 2rem;
         font-family: $pmarker;
         float: left;
       }
+    }
 
+    .resume > #pdf {
+      float: right;
+      margin-top: 1rem;
+      padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+      background: white;
+      border-radius: 5px;
+      a {
+        text-decoration: none;
+        font-size: 2.2rem;
+        color: rgb(0, 0, 0);
+      }
       a:hover {
-        color: rgb(131, 0, 0);
+        color: rgb(204, 204, 204);
+      }
+    }
+
+    .content {
+      grid-column: span 2;
+      h4 {
+        text-align: center;
+      }
+      .tech-icons {
+        width: 100%;
+        text-align: center;
+        font-size: 4vw;
+      }
+      .img-left {
+        float: left;
+        margin-right: 1rem;
+        height: fit-content;
+        width: 40%;
+        aspect-ratio: 4.5 / 3;
+        img {
+          max-width: 50%;
+          min-height: 100%;
+        }
+      }
+      .img-right {
+        float: right;
+        margin-left: 1rem;
+        height: fit-content;
+        width: 40%;
+        aspect-ratio: 4.5 / 3;
+      }
+      p {
+        text-align: justify;
+        text-indent: 3rem;
       }
     }
   }
@@ -422,118 +443,6 @@ nav {
 @media only screen and (max-width: 281px) {
   #container {
     margin-top: 8vh;
-  }
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 40%;
-  padding: 0 1rem 0 1rem;
-  text-align: right;
-  background: grey;
-  color: white;
-  span {
-    cursor: default;
-  }
-  button {
-    float: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.7rem;
-  }
-  .footer-arrow {
-    position: relative;
-    top: 0;
-    margin: 0;
-    padding-top: 3px;
-    width: 100%;
-    font-size: 0.8rem;
-    background: linear-gradient(
-      0.25turn,
-      #ffffff00 15%,
-      rgb(150, 150, 150) 50%,
-      #ffffff00 85%
-    );
-  }
-  .footer-arrow:hover {
-    background: linear-gradient(
-      0.25turn,
-      #ffffff00 15%,
-      rgb(173, 173, 173) 50%,
-      #ffffff00 85%
-    );
-  }
-  .linkedin {
-    position: relative;
-    top: -0.7rem;
-  }
-  .linkedin:hover,
-  .linkedin:focus {
-    color: rgb(64, 168, 216);
-  }
-  .linkedin:active {
-    color: rgb(55, 192, 255);
-  }
-  .github {
-    position: relative;
-    left: -0.2rem;
-  }
-  .github:hover,
-  .github:focus {
-    color: rgb(175, 175, 175);
-  }
-  .github:active {
-    color: rgb(199, 199, 199);
-  }
-  .email {
-    position: relative;
-    top: 0.7rem;
-    right: 0.6rem;
-  }
-  .email:hover,
-  .email:focus {
-    color: rgb(255, 255, 255);
-  }
-  .email:active {
-    color: rgb(182, 182, 182);
-  }
-}
-
-@media only screen and (max-width: 795px) {
-  footer {
-    width: 100%;
-    .email {
-      position: relative;
-      top: 0;
-      left: 3%;
-    }
-    .github {
-      position: relative;
-      top: 0;
-      left: 3%;
-    }
-    .linkedin {
-      position: relative;
-      top: 0;
-      left: 3%;
-    }
-  }
-}
-
-.open-animation {
-  padding-bottom: 0.5rem;
-  animation-name: open;
-  animation-duration: 1s;
-}
-@keyframes open {
-  0% {
-    bottom: -10.5%;
-  }
-  100% {
-    bottom: 0;
   }
 }
 

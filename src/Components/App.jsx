@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../sass/style.css';
 import Navigation from './Navigation';
 import Container from './Container';
-import Footer from './Footer';
 import BG from './backgroundAnimation/BG';
 
 const COLORS = [
@@ -34,7 +33,6 @@ function App() {
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Navigation color={COLORS[colorIndex]} />
       <Container />
-      <Footer color={COLORS[colorIndex]} />
     </div>
   );
 }
