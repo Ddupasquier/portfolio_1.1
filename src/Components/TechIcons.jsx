@@ -1,9 +1,11 @@
 import React from 'react';
 import * as DiIcon from 'react-icons/di';
+// import reactIcon from '../assets/react-original-wordmark.svg';
 
 function TechIcons() {
   return (
     <>
+      {/* <img src={reactIcon} alt="react" /> */}
       <DiIcon.DiReact title="React" />
       <DiIcon.DiGithubBadge title="GitHub" />
       <DiIcon.DiCss3 title="CSS3" />

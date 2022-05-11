@@ -70,6 +70,7 @@ nav {
     }
     .each-button:hover {
       color: rgba(255, 255, 255, 0.534);
+      font-style: italic;
     }
   }
 
@@ -82,7 +83,6 @@ nav {
       z-index: -1000;
     }
   }
-
 
   // **************************work on this***************************************
   @media only screen and (max-width: 450px) {
@@ -282,7 +282,7 @@ nav {
     }
 
     // *********************media query**************************
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 359px) {
       .name {
         display: none;
       }

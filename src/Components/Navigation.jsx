@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function Navigation({ color }) {
+  const [hover, setHover] = useState(color);
   const linkStyle = { color, filter: 'brightness(150)' };
 
   const links = [
-    <Link to="/" className="each-button" key="1" style={linkStyle}>
+    <Link
+      to="/"
+      className="each-button"
+      key="1"
+      style={linkStyle}
+      onMousEnter={() => setHover(`${hover}, filter: 'brightness(50)'`)}
+      onMouseLeave={() => setHover(`${color}, filter: 'brightness(150)'`)}
+    >
       About
     </Link>,
     ' | ',
