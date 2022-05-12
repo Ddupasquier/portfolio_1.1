@@ -5,7 +5,6 @@ import Footer from './Footer';
 import Photo1 from '../assets/personalphoto1.jpg';
 import Photo2 from '../assets/climbing.jpg';
 import Photo3 from '../assets/bierschtadt.jpg';
-import Resume from '../assets/Dylan Dupasquier-Resume-Revised-4-28.pdf';
 import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
 import TechIcons from './TechIcons';
 import SocialLinks from './SocialLinks';
@@ -17,10 +16,8 @@ function Home() {
         <span>Hi, I'm Dylan Dupasquier</span>
       </div>
       <div className="resume">
-        <div id="pdf">
-          <a href={Resume} target="_blank" rel="noopener noreferrer">
-            <SocialLinks />
-          </a>
+        <div id="sl">
+          <SocialLinks />
         </div>
       </div>
 
@@ -28,7 +25,7 @@ function Home() {
         <h4>
           <i>Full-Stack React & Ruby on Rails Software Developer</i>
         </h4>
-        <div className="tech-icons">
+        <div className="tech-icon-container">
           <TechIcons />
         </div>
         <section>
@@ -58,10 +55,8 @@ function Home() {
             recently, which is consistently being updated with new content, as
             well as a contact section if you would like to contact me.
           </p>
-          <br />
         </section>
         <hr />
-        <br />
         <section>
           <img src={Photo3} alt="bierschtadt" className="img-right" />
           <p>

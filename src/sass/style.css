@@ -94,11 +94,6 @@ nav .links .each-button:hover {
     z-index: -1000;
   }
 }
-@media only screen and (max-width: 450px) {
-  nav .links {
-    font-size: 1vw;
-  }
-}
 @media only screen and (max-width: 468px) {
   nav .logo {
     font-size: 1.5rem;
@@ -321,17 +316,13 @@ nav .links .each-button:hover {
 #container #about footer {
   position: static;
   bottom: 0;
-  width: 100%;
+  padding: 0.5rem;
   height: 4.5rem;
   background: grey;
   color: white;
 }
 #container #about footer span {
   cursor: default;
-}
-#container #about hr {
-  width: 65%;
-  border-top: black solid 1px;
 }
 #container #about .name span {
   margin-top: 1rem;
@@ -344,7 +335,7 @@ nav .links .each-button:hover {
     display: none;
   }
 }
-#container #about .resume > #pdf {
+#container #about .resume > #sl {
   float: right;
   margin-top: 1rem;
   padding: 0.5rem 0.5rem 0.2rem 0.5rem;
@@ -358,24 +349,36 @@ nav .links .each-button:hover {
   background: white;
   border-radius: 5px;
 }
-#container #about .resume > #pdf a {
+#container #about .resume > #sl a {
   text-decoration: none;
   font-size: 3.5vw;
   color: black;
 }
-#container #about .resume > #pdf a:hover {
+#container #about .resume > #sl a:hover {
   color: #cccccc;
 }
 #container #about .content {
   grid-column: span 2;
 }
+#container #about .content hr {
+  margin: 1.5rem auto;
+  width: 55%;
+  border-top: black solid 1px;
+}
 #container #about .content h4 {
   text-align: center;
 }
-#container #about .content .tech-icons {
+#container #about .content .tech-icon-container {
   width: 100%;
+  padding: 0.5rem;
   text-align: center;
   font-size: 4vw;
+  background: rgba(255, 255, 255, 0.384);
+  border-radius: 5px;
+}
+#container #about .content .tech-icon-container img {
+  width: 3.5vw;
+  margin: 0 0.19rem;
 }
 #container #about .content .img-left {
   float: left;
@@ -414,6 +417,7 @@ nav .links .each-button:hover {
   border-radius: 8px;
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
+  overflow-x: hidden;
   color: white;
 }
 #contact h3 {
@@ -429,7 +433,6 @@ nav .links .each-button:hover {
   height: fit-content;
   text-align: center;
 }
-#contact #social-links button,
 #contact #social-links a {
   background: none;
   border: none;
@@ -437,11 +440,9 @@ nav .links .each-button:hover {
   cursor: pointer;
   color: white;
 }
-#contact #social-links button:hover,
 #contact #social-links a:hover {
   color: grey;
 }
-#contact #social-links button:active,
 #contact #social-links a:active {
   color: #a7a7a7;
 }
@@ -461,6 +462,7 @@ nav .links .each-button:hover {
   background: rgba(255, 255, 255, 0.603);
   border-radius: 3px;
   margin: 2% 2% 2% 2%;
+  padding: 2% 0;
   height: 95%;
 }
 #contact .form-login2 form input,

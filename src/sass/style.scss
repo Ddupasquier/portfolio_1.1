@@ -58,6 +58,7 @@ nav {
     margin-right: 1rem;
     width: 28rem;
     color: rgb(219, 219, 219);
+    // font-size: 2.6vw;
     font-weight: bold;
     font-family: $nosifer;
     border: rgba(255, 255, 255, 0) solid;
@@ -81,13 +82,6 @@ nav {
       top: 10vh;
       right: 20px;
       z-index: -1000;
-    }
-  }
-
-  // **************************work on this***************************************
-  @media only screen and (max-width: 450px) {
-    .links {
-      font-size: 1vw;
     }
   }
 
@@ -260,7 +254,7 @@ nav {
     footer {
       position: static;
       bottom: 0;
-      width: 100%;
+      padding: 0.5rem;
       height: 4.5rem;
       background: grey;
       color: white;
@@ -268,10 +262,7 @@ nav {
         cursor: default;
       }
     }
-    hr {
-      width: 65%;
-      border-top: black solid 1px;
-    }
+
     .name {
       span {
         margin-top: 1rem;
@@ -288,7 +279,7 @@ nav {
       }
     }
 
-    .resume > #pdf {
+    .resume > #sl {
       float: right;
       margin-top: 1rem;
       padding: 0.5rem 0.5rem 0.2rem 0.5rem;
@@ -309,13 +300,25 @@ nav {
 
     .content {
       grid-column: span 2;
+      hr {
+        margin: 1.5rem auto;
+        width: 55%;
+        border-top: black solid 1px;
+      }
       h4 {
         text-align: center;
       }
-      .tech-icons {
+      .tech-icon-container {
         width: 100%;
+        padding: 0.5rem;
         text-align: center;
         font-size: 4vw;
+        background: rgba(255, 255, 255, 0.384);
+        border-radius: 5px;
+        img {
+          width: 3.5vw;
+          margin: 0 0.19rem;
+        }
       }
       .img-left {
         float: left;
@@ -353,6 +356,7 @@ nav {
   border-radius: 8px;
   box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
   overflow-y: auto;
+  overflow-x: hidden;
   color: white;
   h3 {
     text-align: center;
@@ -362,7 +366,6 @@ nav {
     width: fit-content;
     height: fit-content;
     text-align: center;
-    button,
     a {
       background: none;
       border: none;
@@ -370,11 +373,9 @@ nav {
       cursor: pointer;
       color: white;
     }
-    button:hover,
     a:hover {
       color: grey;
     }
-    button:active,
     a:active {
       color: rgb(167, 167, 167);
     }
@@ -395,6 +396,7 @@ nav {
       background: rgba(255, 255, 255, 0.603);
       border-radius: 3px;
       margin: 2% 2% 2% 2%;
+      padding: 2% 0;
       height: 95%;
       input,
       textarea {
