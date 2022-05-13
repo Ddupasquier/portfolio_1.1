@@ -23,7 +23,7 @@ function Home() {
 
       <div className="content">
         <h4>
-          <i>Full-Stack React & Ruby on Rails Software Developer</i>
+          <i>Full-Stack React.js & Ruby on Rails Software Developer</i>
         </h4>
         <div className="tech-icon-container">
           <TechIcons />
@@ -69,6 +69,11 @@ function Home() {
             When my eyes aren't glued to a computer screen, you can find me
             outside rock climbing, hiking, gardening, or in the garage working
             on my latest wood working project.
+          </p>
+          <p>
+            Technologies which I use daily include React.js, HTML5, CSS3, SCSS,
+            JavaScript, Linux, Ruby, Ruby on Rails, VSCode, Ubuntu, Github, and
+            Netlify.
           </p>
         </section>
         <br />
