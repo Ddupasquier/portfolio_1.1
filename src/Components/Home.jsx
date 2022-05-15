@@ -29,10 +29,11 @@ function Home() {
             me to excel in a tech environment that requires creative,
             constructive, and critical thinking skills. My experience doing
             hands-on work combined with the technical skills acquired at{' '}
+            Flatiron School{' '}
             <a href={FlatCert} target="_blank" rel="noopener noreferrer">
-              Flatiron
-            </a>{' '}
-            School's Software Engineering bootcamp will allow me to make
+              (Certificate of completion found here)
+            </a>
+            . School's Software Engineering bootcamp will allow me to make
             excellent contributions to the world of tech, software development,
             and computer science.
           </p>
