@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../sass/style.css';
-import Navigation from './Navigation';
 import Container from './Container';
 import BG from './backgroundAnimation/BG';
 
@@ -31,7 +30,6 @@ function App() {
   return (
     <div className="App">
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
-      <Navigation color={COLORS[colorIndex]} />
       <Container />
     </div>
   );

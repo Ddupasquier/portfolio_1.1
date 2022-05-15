@@ -18,7 +18,10 @@ function ContactForm() {
     send(serviceID, templateID, toSend, userID)
       .then(() => {
         // eslint-disable-next-line no-alert
-        alert("Thanks for the email! I'll get back to you as soon as possible.");
+        alert(
+          // eslint-disable-next-line comma-dangle
+          "Thanks for the email! I'll get back to you as soon as possible."
+        );
       })
       .catch((err) => {
         // eslint-disable-next-line no-alert
@@ -31,7 +34,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="form-login2">
+    <div id="contact">
       <form onSubmit={onSubmit}>
         <input
           type="text"

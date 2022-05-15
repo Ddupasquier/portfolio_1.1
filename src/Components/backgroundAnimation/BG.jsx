@@ -5,10 +5,10 @@ import Burst from './Burst';
 
 function BG({ changeBg, color }) {
   return (
-    <>
+    <div id="BG">
       <BackgroundColor color={color} />
       <Burst changeBg={changeBg} color={color} />
-    </>
+    </div>
   );
 }
 

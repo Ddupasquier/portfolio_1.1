@@ -34,7 +34,10 @@ function TechIcons() {
   ];
 
   const iconImgs = icons.map((icon) => (
-    <img src={icon} alt={icon.id} key={icon} />
+    <React.Fragment key={icon}>
+      <img src={icon} alt={icon.id} key={icon} />
+      <br />
+    </React.Fragment>
   ));
 
   return (

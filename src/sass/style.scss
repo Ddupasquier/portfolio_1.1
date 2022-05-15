@@ -2,176 +2,178 @@
 $indie: 'Indie Flower', cursive;
 $nosifer: 'Nosifer', cursive;
 $pmarker: 'Permanent Marker', cursive;
-$whitetrans: rgba(255, 255, 255, 0.548);
+$whitetrans: rgba(172, 172, 172, 0.774);
 
 body,
 html {
   margin: 0;
   height: 100%;
-  overflow-y: hidden;
 }
 
-.change-bg {
-  position: fixed;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-nav {
-  width: 100%;
-  height: 10vh;
-  position: fixed;
-  z-index: 999;
-  padding-top: 1%;
-  top: 0;
-  right: 0;
-  .logo {
-    margin-left: 0.7rem;
-    border: rgba(255, 192, 203, 0) solid;
-    height: fit-content;
-    float: left;
-    font-size: 2rem;
-    font-family: $nosifer;
-    color: #000000;
-    animation-name: showlogo;
-    animation-duration: 0.5s;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-  }
-  @keyframes showlogo {
-    0% {
-      position: relative;
-      left: -500px;
-      opacity: 0;
-    }
-    100% {
-      position: relative;
-      left: 0;
-      opacity: 1;
-    }
-  }
-  .links {
-    float: right;
-    margin-top: 0.8%;
-    margin-right: 1rem;
-    width: 19rem;
-    color: rgb(219, 219, 219);
-    text-align: right;
-    font-weight: bold;
-    font-family: $pmarker;
-    border: rgba(255, 255, 255, 0) solid;
-    box-sizing: border-box;
-    z-index: 1000;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    .each-button {
-      font-size: 1.4rem;
-      text-decoration: none;
-    }
-    .each-button:hover {
-      color: rgba(255, 255, 255, 0.534);
-      font-style: italic;
-    }
-  }
-
-  @media only screen and (max-width: 772px) {
-    .links {
-      transform: rotate(90deg) translatex(30%) translatey(-540%);
-      text-align: left;
-      position: relative;
-      top: 86px;
-      right: 56px;
-    }
-  }
-
-  @media only screen and (max-width: 468px) {
-    .logo {
-      font-size: 1.5rem;
-    }
-  }
-
-  @media only screen and (max-width: 360px) {
-    .logo {
-      font-size: 5vw;
-    }
-  }
+body {
+  overflow-x: hidden;
 }
 
 #container {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95vw;
-  height: 90vh;
-  padding-bottom: 2rem;
-  #projects {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    width: 90%;
-    height: 98%;
-    overflow-y: auto;
-    padding: 12vh 0 1vh 0;
-    gap: 2rem;
-    a {
-      position: relative;
-      width: 18em;
-      aspect-ratio: 4 / 3;
-      margin: auto;
-      box-shadow: 5px 5px 10px black;
-      cursor: pointer;
-      text-decoration: none;
-      .proj-title {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 1.3em;
-        color: black;
-        text-align: center;
-        font-weight: bold;
-        background: rgba(255, 255, 255, 0.61);
-        display: none;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: fit-content 92%;
+  z-index: 500;
+  #logo {
+    margin-left: 0.7rem;
+    border: rgba(255, 192, 203, 0) solid;
+    font-size: 1.9rem;
+    font-family: $nosifer;
+    color: #c2c2c2;
+    cursor: default;
+  }
+
+  #social-links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+    padding: 0.8rem 0.8rem 0.4rem 0.8rem;
+    background: $whitetrans;
+    border-radius: 5px;
+    font-size: 5vw;
+    z-index: 1000;
+    text-align: center;
+    .each-social {
+      color: black;
+    }
+    .each-social:hover {
+      color: rgb(71, 71, 71);
+    }
+    .each-social:nth-child(2) {
+      margin-left: 0.5rem;
+    }
+    #nav {
+      font-weight: bold;
+      font-size: 1rem;
+      font-family: $pmarker;
+      .each-link {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
       }
-      .proj-img {
-        width: 100%;
-        height: 100%;
-        background-position: top left;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      .proj-img:hover > .proj-title {
-        display: block;
-        animation-name: showtitle;
-        animation-duration: 0.5s;
-      }
-      .proj-tech {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: fit-content;
-        color: black;
-        text-align: center;
-        font-weight: bold;
-        background: rgba(255, 255, 255, 0.61);
-        display: none;
-      }
-      .proj-img:hover > .proj-title {
-        display: block;
-        animation-name: showtitle;
-        animation-duration: 1s;
-      }
-      .proj-img:hover > .proj-tech {
-        display: block;
-        animation-name: showtech;
-        animation-duration: 1s;
+      .each-link:hover {
+        color: rgb(87, 87, 87);
       }
     }
   }
-// ***********************************work on this*********************************************
-  @media only screen and (max-width: 912px) {
+
+  #main-content {
+    grid-column: span 2;
+    z-index: 500;
+    #about {
+      background: $whitetrans;
+      padding: 1rem 1.5rem 5rem 1.5rem;
+      margin: 4% auto 4% auto;
+      height: fit-content;
+      width: 80%;
+      border-radius: 8px;
+      box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
+      .tech-icon-container {
+        float: right;
+        margin-left: 1rem;
+        padding: 0.5rem;
+        height: fit-content;
+        background: $whitetrans;
+        border-radius: 5px;
+        img {
+          width: 30px;
+        }
+      }
+      .top-img {
+        float: left;
+        width: 20%;
+        margin: auto;
+        aspect-ratio: 2.2 / 3;
+      }
+      .right {
+        margin-right: 1rem;
+      }
+      .img-right {
+        float: right;
+        margin-left: 1rem;
+        height: fit-content;
+        width: 40%;
+        aspect-ratio: 4.5 / 3;
+      }
+      h4 {
+        text-align: center;
+      }
+      p {
+        text-align: justify;
+        text-indent: 3rem;
+      }
+    }
+
+    #projects {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 4% auto 8% auto;
+      width: 90%;
+      height: fit-content;
+      gap: 2rem;
+      z-index: -1000;
+      a {
+        position: relative;
+        width: 20em;
+        aspect-ratio: 4 / 3;
+        margin: auto;
+        box-shadow: 5px 5px 10px black;
+        cursor: pointer;
+        text-decoration: none;
+        .proj-title {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 1.3em;
+          color: black;
+          text-align: center;
+          font-weight: bold;
+          background: rgba(255, 255, 255, 0.61);
+          display: none;
+        }
+        .proj-img {
+          width: 100%;
+          height: 100%;
+          background-position: top left;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+        .proj-img:hover > .proj-title {
+          display: block;
+          animation-name: showtitle;
+          animation-duration: 0.5s;
+        }
+        .proj-tech {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: fit-content;
+          color: black;
+          text-align: center;
+          font-weight: bold;
+          background: rgba(255, 255, 255, 0.61);
+          display: none;
+        }
+        .proj-img:hover > .proj-title {
+          display: block;
+          animation-name: showtitle;
+          animation-duration: 1s;
+        }
+        .proj-img:hover > .proj-tech {
+          display: block;
+          animation-name: showtech;
+          animation-duration: 1s;
+        }
+      }
+    }
+
     @keyframes showtitle {
       0% {
         opacity: 0;
@@ -241,238 +243,76 @@ nav {
       opacity: 1;
     }
   }
-
-  #about {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 6rem auto;
-    background: $whitetrans;
-    padding: 0 1.5rem 0 1.5rem;
-    margin: auto;
-    margin-top: 8%;
-    max-height: 80%;
-    width: 80%;
-    border-radius: 8px;
-    box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
-    overflow-y: auto;
-    footer {
-      position: static;
-      bottom: 0;
-      padding: 0.5rem;
-      height: fit-content;
-      background: $whitetrans;
-      color: black;
-      span {
-        cursor: default;
-      }
-    }
-
-    .name {
-      span {
-        margin-top: 1rem;
-        font-size: 2rem;
-        font-family: $pmarker;
-        float: left;
-      }
-    }
-
-    // *********************media query**************************
-    @media only screen and (max-width: 359px) {
-      .name {
-        display: none;
-      }
-    }
-
-    @media only screen and (max-width: 359px) {
-      .resume {
-        display: none;
-      }
-    }
-
-    .resume > #sl {
-      float: right;
-      margin-top: 1rem;
-      padding: 0.5rem 0.5rem 0.2rem 0.5rem;
-      width: fit-content;
-      height: fit-content;
-      text-align: center;
-      background: $whitetrans;
-      border-radius: 5px;
-      a {
-        text-decoration: none;
-        font-size: 3.5vw;
-        color: rgb(0, 0, 0);
-      }
-      a:hover {
-        color: rgba(0, 0, 0, 0.473);
-      }
-    }
-
-    .content {
-      grid-column: span 2;
-      hr {
-        margin: 1.5rem auto;
-        width: 55%;
-        border-top: black solid 1px;
-      }
-      h4 {
-        text-align: center;
-      }
-      .tech-icon-container {
-        width: 100%;
-        padding: 0.5rem;
-        text-align: center;
-        font-size: 4vw;
-        background: $whitetrans;
-        border-radius: 5px;
-        img {
-          width: 3.5vw;
-          margin: 0 0.19rem;
-        }
-      }
-      .img-left {
-        float: left;
-        margin-right: 1rem;
-        height: fit-content;
-        width: 40%;
-        aspect-ratio: 4.5 / 3;
-        img {
-          max-width: 50%;
-          min-height: 100%;
-        }
-      }
-      .img-right {
-        float: right;
-        margin-left: 1rem;
-        height: fit-content;
-        width: 40%;
-        aspect-ratio: 4.5 / 3;
-      }
-      p {
-        text-align: justify;
-        text-indent: 3rem;
-      }
-    }
-  }
-  @media only screen and (max-width: 359px) {
-    #about {
-      height: 90vh;
-    }
-  }
 }
 
 #contact {
-  background: rgba(0, 0, 0, 0.548);
-  padding: 0 1.5rem 0 1.5rem;
-  margin: auto;
-  margin-top: 8%;
-  max-height: 80%;
-  width: 80%;
+  background-image: url('https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg');
+  background-position: center;
+  background-size: cover;
   border-radius: 8px;
-  box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: white;
-  h3 {
-    text-align: center;
-  }
-  #social-links {
-    margin: auto;
-    width: fit-content;
-    height: fit-content;
-    text-align: center;
-    a {
-      background: none;
-      border: none;
-      font-size: 3.5vw;
-      cursor: pointer;
+  height: 20rem;
+  width: 80%;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  margin: 4% auto;
+  text-align: center;
+  form {
+    background: rgba(255, 255, 255, 0.603);
+    border-radius: 5px;
+    padding: 2% 0;
+    height: 17.5rem;
+    input,
+    textarea {
+      margin: 0.25rem auto 0 auto;
+      width: 80%;
+    }
+
+    textarea {
+      max-width: 80%;
+      max-height: 55%;
+    }
+
+    .btn19 {
+      margin-top: 0.25rem;
+      border-radius: 100rem;
+      font-size: 0.7rem;
+      padding: 0.5rem 2rem;
+      color: black;
+      box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+      border: solid 4px transparent;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        linear-gradient(50deg, #00ff62, #7700ff);
+      background-origin: border-box;
+      box-shadow: 2px 1000px 1px #fff inset;
+    }
+
+    .btn19:hover {
+      box-shadow: none;
       color: white;
     }
-    a:hover {
-      color: grey;
-    }
-    a:active {
-      color: rgb(167, 167, 167);
-    }
-  }
 
-  .form-login2 {
-    background-image: url('https://i.ibb.co/VN60yMy/trees-in-the-ocean-Trading-Card.jpg');
-    background-position: center;
-    background-size: cover;
-    border-radius: 8px;
-    height: 40%;
-    width: 80%;
-    color: rgb(0, 0, 0);
-    padding: 1.1%;
-    margin: 0 auto 2% auto;
-    text-align: center;
-    form {
-      background: rgba(255, 255, 255, 0.603);
-      border-radius: 3px;
-      margin: 2% 2% 2% 2%;
-      padding: 2% 0;
-      height: 95%;
-      input,
-      textarea {
-        margin: 0.25rem auto 0 auto;
-        width: 80%;
-      }
-
-      textarea {
-        max-width: 90%;
-        max-height: 60%;
-      }
-
-      .btn19 {
-        margin-top: 0.25rem;
-        border-radius: 100rem;
-        font-size: 0.7rem;
-        padding: 0.5rem 2rem;
-        color: black;
-        box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-        border: solid 4px transparent;
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0)
-          ),
-          linear-gradient(50deg, #00ff62, #7700ff);
-        background-origin: border-box;
-        box-shadow: 2px 1000px 1px #fff inset;
-      }
-
-      .btn19:hover {
-        box-shadow: none;
-        color: white;
-      }
-
-      .btn19:active {
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            rgba(255, 255, 255, 0)
-          ),
-          linear-gradient(90deg, #00ff62, #7700ff);
-      }
-    }
-  }
-  @media only screen and (max-width: 484px) {
-    .form-login2 {
-      width: 100%;
+    .btn19:active {
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        linear-gradient(90deg, #00ff62, #7700ff);
     }
   }
 }
 
-::-webkit-scrollbar {
-  width: 0.3em;
+#BG {
+  z-index: -10000;
 }
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  border-radius: 8px;
+.change-bg {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1000;
 }

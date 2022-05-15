@@ -67,7 +67,7 @@ const Burst = ({ changeBg }) => {
             // },
 
             color: {
-              value: '#000000',
+              value: '#0000007e',
             },
             collisions: {
               enable: true,

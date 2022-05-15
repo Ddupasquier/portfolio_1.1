@@ -1,38 +1,28 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Footer from './Footer';
 import Photo1 from '../assets/personalphoto1.jpg';
 import Photo2 from '../assets/climbing.jpg';
 import Photo3 from '../assets/bierschtadt.jpg';
 import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
 import TechIcons from './TechIcons';
-import SocialLinks from './SocialLinks';
 
 function Home() {
   return (
     <div id="about">
-      <div className="name">
-        <span>Hi, I'm Dylan Dupasquier</span>
-      </div>
-      <div className="resume">
-        <div id="sl">
-          <SocialLinks />
-        </div>
-      </div>
-
-      <div className="content">
+      <div className="about-intro">
         <h4>
           <i>Full-Stack React.js & Ruby on Rails Software Developer</i>
         </h4>
+      </div>
+      <div className="about-content">
         <div className="tech-icon-container">
           <TechIcons />
         </div>
         <section>
-          <div className="img-left">
-            <img src={Photo1} alt="linkedin" />
-            <img src={Photo2} alt="climbing" />
-          </div>
+          <img src={Photo1} alt="linkedin" className="top-img" />
+          <img src={Photo2} alt="climbing" className="top-img right" />
+
           <p>
             Full Stack Software Developer with ten years of experience in areas
             of carpentry, plumbing and electrical work. This work has prepared
@@ -56,7 +46,6 @@ function Home() {
             well as a contact section if you would like to contact me.
           </p>
         </section>
-        <hr />
         <section>
           <img src={Photo3} alt="bierschtadt" className="img-right" />
           <p>
@@ -75,10 +64,6 @@ function Home() {
             JavaScript, Linux, Ruby, Ruby on Rails, VSCode, Ubuntu, Github, and
             Netlify.
           </p>
-        </section>
-        <br />
-        <section>
-          <Footer />
         </section>
       </div>
     </div>
