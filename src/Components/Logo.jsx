@@ -5,7 +5,6 @@ function Logo() {
   return (
     <div id="logo">
       Dylan Dupasquier
-      <br />
     </div>
   );
 }

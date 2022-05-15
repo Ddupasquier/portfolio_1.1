@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../sass/style.css';
 import Container from './Container';
 import BG from './backgroundAnimation/BG';
+import Footer from './Footer';
 
 const COLORS = [
   '#680000',
@@ -31,6 +32,7 @@ function App() {
     <div className="App">
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Container />
+      <Footer />
     </div>
   );
 }

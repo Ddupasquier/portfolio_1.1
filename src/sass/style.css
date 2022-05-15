@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nosifer&family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Montserrat&family=Nosifer&family=Permanent+Marker&family=Poppins&display=swap");
 body,
 html {
   margin: 0;
@@ -18,7 +18,8 @@ body {
   z-index: 500;
 }
 #container #logo {
-  margin-left: 0.7rem;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
   border: rgba(255, 192, 203, 0) solid;
   font-size: 1.9rem;
   font-family: "Nosifer", cursive;
@@ -57,6 +58,11 @@ body {
 }
 #container #social-links #nav .each-link:hover {
   color: #575757;
+}
+@media only screen and (max-width: 415px) {
+  #container #social-links #nav {
+    font-size: 3vw;
+  }
 }
 #container #main-content {
   grid-column: span 2;
@@ -110,6 +116,7 @@ body {
 #container #main-content #about p {
   text-align: justify;
   text-indent: 3rem;
+  font-family: "Montserrat", sans-serif;
 }
 #container #main-content #projects {
   display: flex;
@@ -122,8 +129,9 @@ body {
   height: fit-content;
   gap: 2rem;
   z-index: -1000;
+  font-family: "Montserrat", sans-serif;
 }
-#container #main-content #projects a {
+#container #main-content #projects .proj {
   position: relative;
   width: 20em;
   aspect-ratio: 4/3;
@@ -131,8 +139,11 @@ body {
   box-shadow: 5px 5px 10px black;
   cursor: pointer;
   text-decoration: none;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-#container #main-content #projects a .proj-title {
+#container #main-content #projects .proj .proj-title {
   position: absolute;
   top: 0;
   width: 100%;
@@ -143,21 +154,14 @@ body {
   background: rgba(255, 255, 255, 0.61);
   display: none;
 }
-#container #main-content #projects a .proj-img {
-  width: 100%;
-  height: 100%;
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-#container #main-content #projects a .proj-img:hover > .proj-title {
+#container #main-content #projects .proj .proj-img:hover > .proj-title {
   display: block;
   -webkit-animation-name: showtitle;
           animation-name: showtitle;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
 }
-#container #main-content #projects a .proj-tech {
+#container #main-content #projects .proj .proj-tech {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -170,19 +174,41 @@ body {
   background: rgba(255, 255, 255, 0.61);
   display: none;
 }
-#container #main-content #projects a .proj-img:hover > .proj-title {
+#container #main-content #projects .proj .proj-img:hover > .proj-title {
   display: block;
   -webkit-animation-name: showtitle;
           animation-name: showtitle;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
-#container #main-content #projects a .proj-img:hover > .proj-tech {
+#container #main-content #projects .proj .proj-img:hover > .proj-tech {
   display: block;
   -webkit-animation-name: showtech;
           animation-name: showtech;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+#container #main-content #projects .proj .proj-button {
+  position: relative;
+  top: 40%;
+  left: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: black;
+  border: none;
+  border-radius: 500px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+#container #main-content #projects .proj .proj-button:hover {
+  background: #3a3a3a;
+  box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.555);
+}
+#container #main-content #projects .proj .proj-button:active {
+  background: #1b1b1b;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.555);
 }
 @-webkit-keyframes showtitle {
   0% {
@@ -345,13 +371,18 @@ body {
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, #00ff62, #7700ff);
 }
 
+footer {
+  background: rgba(255, 255, 255, 0.788);
+  font-family: "Montserrat", sans-serif;
+}
+
 #BG {
   z-index: -10000;
 }
 
 .change-bg {
   position: fixed;
-  height: 100vh;
+  height: 110vh;
   top: 0;
   left: 0;
   right: 0;

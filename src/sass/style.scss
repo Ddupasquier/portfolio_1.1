@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nosifer&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato&family=Montserrat&family=Nosifer&family=Permanent+Marker&family=Poppins&display=swap');
+$lato: 'Lato', sans-serif;
+$mont: 'Montserrat', sans-serif;
+$poppins: 'Poppins', sans-serif;
 $indie: 'Indie Flower', cursive;
 $nosifer: 'Nosifer', cursive;
 $pmarker: 'Permanent Marker', cursive;
@@ -21,7 +24,8 @@ body {
   grid-template-rows: fit-content 92%;
   z-index: 500;
   #logo {
-    margin-left: 0.7rem;
+    margin-top: 1.2rem;
+    margin-left: 1.2rem;
     border: rgba(255, 192, 203, 0) solid;
     font-size: 1.9rem;
     font-family: $nosifer;
@@ -59,6 +63,11 @@ body {
       }
       .each-link:hover {
         color: rgb(87, 87, 87);
+      }
+    }
+    @media only screen and (max-width: 415px) {
+      #nav {
+        font-size: 3vw;
       }
     }
   }
@@ -107,6 +116,7 @@ body {
       p {
         text-align: justify;
         text-indent: 3rem;
+        font-family: $mont;
       }
     }
 
@@ -119,7 +129,8 @@ body {
       height: fit-content;
       gap: 2rem;
       z-index: -1000;
-      a {
+      font-family: $mont;
+      .proj {
         position: relative;
         width: 20em;
         aspect-ratio: 4 / 3;
@@ -127,6 +138,9 @@ body {
         box-shadow: 5px 5px 10px black;
         cursor: pointer;
         text-decoration: none;
+        background-position: top left;
+        background-size: cover;
+        background-repeat: no-repeat;
         .proj-title {
           position: absolute;
           top: 0;
@@ -137,13 +151,6 @@ body {
           font-weight: bold;
           background: rgba(255, 255, 255, 0.61);
           display: none;
-        }
-        .proj-img {
-          width: 100%;
-          height: 100%;
-          background-position: top left;
-          background-size: cover;
-          background-repeat: no-repeat;
         }
         .proj-img:hover > .proj-title {
           display: block;
@@ -170,6 +177,27 @@ body {
           display: block;
           animation-name: showtech;
           animation-duration: 1s;
+        }
+        .proj-button {
+          position: relative;
+          top: 40%;
+          left: 5px;
+          width: fit-content;
+          background: black;
+          // box-shadow: 3px 3px 10px rgb(68, 68, 68);
+          border: none;
+          border-radius: 500px;
+          color: white;
+          font-family: $mont;
+          cursor: pointer;
+        }
+        .proj-button:hover {
+          background: rgb(58, 58, 58);
+          box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.555);
+        }
+        .proj-button:active {
+          background: rgb(27, 27, 27);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.555);
         }
       }
     }
@@ -304,13 +332,18 @@ body {
   }
 }
 
+footer {
+  background: rgba(255, 255, 255, 0.788);
+  font-family: $mont;
+}
+
 #BG {
   z-index: -10000;
 }
 
 .change-bg {
   position: fixed;
-  height: 100vh;
+  height: 110vh;
   top: 0;
   left: 0;
   right: 0;
