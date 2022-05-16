@@ -118,6 +118,12 @@ body {
         text-indent: 3rem;
         font-family: $mont;
       }
+      @media only screen and (max-width: 415px) {
+        p {
+          text-align: left;
+          text-indent: 1rem;
+        }
+      }
     }
 
     #projects {
@@ -335,7 +341,7 @@ body {
 footer {
   background: rgba(255, 255, 255, 0.788);
   font-family: $mont;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #BG {

@@ -24,7 +24,7 @@ function Home() {
           <img src={Photo2} alt="climbing" className="top-img right" />
 
           <p>
-            Full Stack Software Developer with ten years of experience in areas
+            Full-Stack Software Developer with ten years of experience in areas
             of carpentry, plumbing and electrical work. This work has prepared
             me to excel in a tech environment that requires creative,
             constructive, and critical thinking skills. My experience doing

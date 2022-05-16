@@ -33,9 +33,9 @@ function TechIcons() {
     netlifyIcon,
   ];
 
-  const iconImgs = icons.map((icon) => (
-    <React.Fragment key={icon}>
-      <img src={icon} alt={icon.id} key={icon} />
+  const iconImgs = icons.map((icon, i) => (
+    <React.Fragment id={i} key={icon.id}>
+      <img src={icon} alt={icon.id} />
       <br />
     </React.Fragment>
   ));
