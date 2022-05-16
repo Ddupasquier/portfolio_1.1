@@ -5,7 +5,7 @@ $poppins: 'Poppins', sans-serif;
 $indie: 'Indie Flower', cursive;
 $nosifer: 'Nosifer', cursive;
 $pmarker: 'Permanent Marker', cursive;
-$whitetrans: rgba(172, 172, 172, 0.774);
+$whitetrans: rgba(255, 255, 255, 0.644);
 
 body,
 html {
@@ -39,7 +39,7 @@ body {
     top: 0;
     margin: 1rem;
     padding: 0.8rem 0.8rem 0.4rem 0.8rem;
-    background: $whitetrans;
+    background: white;
     border-radius: 5px;
     font-size: 5vw;
     z-index: 1000;
@@ -335,6 +335,7 @@ body {
 footer {
   background: rgba(255, 255, 255, 0.788);
   font-family: $mont;
+  padding: .5rem;
 }
 
 #BG {

@@ -32,7 +32,7 @@ body {
   top: 0;
   margin: 1rem;
   padding: 0.8rem 0.8rem 0.4rem 0.8rem;
-  background: rgba(172, 172, 172, 0.774);
+  background: white;
   border-radius: 5px;
   font-size: 5vw;
   z-index: 1000;
@@ -69,7 +69,7 @@ body {
   z-index: 500;
 }
 #container #main-content #about {
-  background: rgba(172, 172, 172, 0.774);
+  background: rgba(255, 255, 255, 0.644);
   padding: 1rem 1.5rem 5rem 1.5rem;
   margin: 4% auto 4% auto;
   height: -webkit-fit-content;
@@ -86,7 +86,7 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  background: rgba(172, 172, 172, 0.774);
+  background: rgba(255, 255, 255, 0.644);
   border-radius: 5px;
 }
 #container #main-content #about .tech-icon-container img {
@@ -374,6 +374,7 @@ body {
 footer {
   background: rgba(255, 255, 255, 0.788);
   font-family: "Montserrat", sans-serif;
+  padding: 0.5rem;
 }
 
 #BG {
