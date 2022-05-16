@@ -33,7 +33,7 @@ function ProjDexModal({ onClose }) {
           Github
         </a>
         <br />
-        <b>TECH: VannilaJS, HTML5, CSS3</b>
+        <b>TECH: VanilaJS, HTML5, CSS3</b>
         <p>
           This PokeDex app was created for my phase 1 project for Flatiron
           School. It is a vanilla JS and CSS application, designed to allow the
