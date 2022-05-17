@@ -160,43 +160,6 @@ body {
         background-position: top left;
         background-size: cover;
         background-repeat: no-repeat;
-        .proj-title {
-          position: absolute;
-          top: 0;
-          width: 100%;
-          height: 1.3em;
-          color: black;
-          text-align: center;
-          font-weight: bold;
-          background: rgba(255, 255, 255, 0.61);
-          display: none;
-        }
-        .proj:hover > .proj-title {
-          display: block;
-          animation-name: showtitle;
-          animation-duration: 0.5s;
-        }
-        .proj-tech {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: fit-content;
-          color: black;
-          text-align: center;
-          font-weight: bold;
-          background: rgba(255, 255, 255, 0.61);
-          display: none;
-        }
-        .proj:hover > .proj-title {
-          display: block;
-          animation-name: showtitle;
-          animation-duration: 1s;
-        }
-        .proj:hover > .proj-tech {
-          display: block;
-          animation-name: showtech;
-          animation-duration: 1s;
-        }
         .proj-button {
           position: relative;
           top: 40%;
@@ -217,24 +180,66 @@ body {
           background: rgb(27, 27, 27);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.555);
         }
+        .proj-title {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 1.3em;
+          color: black;
+          text-align: center;
+          font-weight: bold;
+          background: rgba(255, 255, 255, 0.61);
+          display: none;
+        }
+        .proj-tech {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: fit-content;
+          color: black;
+          text-align: center;
+          font-weight: bold;
+          background: rgba(255, 255, 255, 0.61);
+          display: none;
+        }
       }
-    }
 
-    @keyframes showtitle {
-      0% {
-        opacity: 0;
+      .proj:hover > .proj-title {
+        display: block;
+        animation-name: show-title;
+        animation-duration: 1s;
+        -webkit-name: show-tite;
+        -webkit-animation-duration: 1s;
       }
-      100% {
-        opacity: 1;
-      }
-    }
 
-    @keyframes showtech {
-      0% {
-        opacity: 0;
+      .proj:hover > .proj-tech {
+        display: block;
+        animation-name: show-tech;
+        animation-duration: 1s;
+        -webkit-name: show-tite;
+        -webkit-animation-duration: 1s;
       }
-      100% {
-        opacity: 1;
+
+      @keyframes show-title {
+        0% {
+          opacity: 0;
+          -webkit-opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          -webkit-opacity: 1;
+        }
+      }
+
+      @keyframes show-tech {
+        0% {
+          opacity: 0;
+          -webkit-opacity: 0;
+        }
+        100% {
+          opacity: 1;
+          -webkit-opacity: 1;
+        }
       }
     }
   }
@@ -353,7 +358,7 @@ body {
 footer {
   background: rgba(255, 255, 255, 0.788);
   font-family: $mont;
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-align: center;
   line-height: 2.5;
   padding: 1rem;

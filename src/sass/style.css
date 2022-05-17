@@ -160,51 +160,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-#container #main-content #projects .proj .proj-title {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 1.3em;
-  color: black;
-  text-align: center;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.61);
-  display: none;
-}
-#container #main-content #projects .proj .proj:hover > .proj-title {
-  display: block;
-  -webkit-animation-name: showtitle;
-          animation-name: showtitle;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-}
-#container #main-content #projects .proj .proj-tech {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  color: black;
-  text-align: center;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.61);
-  display: none;
-}
-#container #main-content #projects .proj .proj:hover > .proj-title {
-  display: block;
-  -webkit-animation-name: showtitle;
-          animation-name: showtitle;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-#container #main-content #projects .proj .proj:hover > .proj-tech {
-  display: block;
-  -webkit-animation-name: showtech;
-          animation-name: showtech;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
 #container #main-content #projects .proj .proj-button {
   position: relative;
   top: 40%;
@@ -227,36 +182,84 @@ body {
   background: #1b1b1b;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.555);
 }
-@-webkit-keyframes showtitle {
+#container #main-content #projects .proj .proj-title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1.3em;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.61);
+  display: none;
+}
+#container #main-content #projects .proj .proj-tech {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.61);
+  display: none;
+}
+#container #main-content #projects .proj:hover > .proj-title {
+  display: block;
+  -webkit-animation-name: show-title;
+          animation-name: show-title;
+  animation-duration: 1s;
+  -webkit-name: show-tite;
+  -webkit-animation-duration: 1s;
+}
+#container #main-content #projects .proj:hover > .proj-tech {
+  display: block;
+  -webkit-animation-name: show-tech;
+          animation-name: show-tech;
+  animation-duration: 1s;
+  -webkit-name: show-tite;
+  -webkit-animation-duration: 1s;
+}
+@-webkit-keyframes show-title {
   0% {
     opacity: 0;
+    -webkit-opacity: 0;
   }
   100% {
     opacity: 1;
+    -webkit-opacity: 1;
   }
 }
-@keyframes showtitle {
+@keyframes show-title {
   0% {
     opacity: 0;
+    -webkit-opacity: 0;
   }
   100% {
     opacity: 1;
+    -webkit-opacity: 1;
   }
 }
-@-webkit-keyframes showtech {
+@-webkit-keyframes show-tech {
   0% {
     opacity: 0;
+    -webkit-opacity: 0;
   }
   100% {
     opacity: 1;
+    -webkit-opacity: 1;
   }
 }
-@keyframes showtech {
+@keyframes show-tech {
   0% {
     opacity: 0;
+    -webkit-opacity: 0;
   }
   100% {
     opacity: 1;
+    -webkit-opacity: 1;
   }
 }
 #container #projects .proj-one {
