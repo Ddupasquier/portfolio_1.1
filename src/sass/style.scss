@@ -31,6 +31,21 @@ body {
     font-family: $nosifer;
     color: #c2c2c2;
     cursor: default;
+    .bg-toggle {
+      margin-left: 1rem;
+      border: none;
+      background: white;
+      border-radius: 5px;
+      color: black;
+      font-size: 1rem;
+      font-weight: bold;
+      font-family: $mont;
+      cursor: pointer;
+    }
+    .bg-toggle:hover {
+      background: grey;
+      color: white;
+    }
   }
 
   #social-links {

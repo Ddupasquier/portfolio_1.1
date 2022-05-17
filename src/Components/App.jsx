@@ -26,10 +26,18 @@ const nextColorIndex = (prevIndex) => (prevIndex + 1) % COLORS.length;
 
 function App() {
   const [colorIndex, setColorIndex] = useState(7);
+  // const [showBgAnimation, setShowBgAnimation] = useState(true);
   const changeBg = () => setColorIndex(nextColorIndex);
 
   return (
     <div className="App">
+      {/* {showBgAnimation ? (
+        <BG changeBg={changeBg} color={COLORS[colorIndex]} />
+      ) : null}
+      <Container
+        showBgAnimation={showBgAnimation}
+        setShowBgAnimation={setShowBgAnimation}
+      /> */}
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Container />
       <Footer />
