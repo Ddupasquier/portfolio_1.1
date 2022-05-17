@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Photo1 from '../assets/personalphoto1.jpg';
-import Photo2 from '../assets/climbing.jpg';
+import Photo1 from '../assets/circleface.png';
+// import Photo2 from '../assets/climbing.jpg';
 import Photo3 from '../assets/bierschtadt.jpg';
 import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
 import TechIcons from './TechIcons';
@@ -21,7 +21,7 @@ function Home() {
         </div>
         <section>
           <img src={Photo1} alt="linkedin" className="top-img" />
-          <img src={Photo2} alt="climbing" className="top-img right" />
+          {/* <img src={Photo2} alt="climbing" className="top-img right" /> */}
 
           <p>
             Full-Stack Software Developer with ten years of experience in areas

@@ -40,7 +40,7 @@ function Projects() {
     <div id="projects">
       <div
         style={{ backgroundImage: `url(${SimpleStyleBg})` }}
-        className="proj"
+        className="proj proj-one"
       >
         <div className="proj-title">SIMPLE STYLES</div>
         <div className="proj-tech">
@@ -57,7 +57,7 @@ function Projects() {
         </button>
       </div>
 
-      <div style={{ backgroundImage: `url(${PokedexBg})` }} className="proj">
+      <div style={{ backgroundImage: `url(${PokedexBg})` }} className="proj proj-two">
         <div className="proj-title">PokeDex</div>
         <div className="proj-tech">TECH: VanillaJs, Html5, CSS3</div>
         <button type="button" className="proj-button" onClick={handleOpenDex}>
@@ -69,7 +69,7 @@ function Projects() {
 
       <div
         style={{ backgroundImage: `url(${NationalParkBg})` }}
-        className="proj"
+        className="proj proj-three"
       >
         <div className="proj-title">National Parks</div>
         <div className="proj-tech">

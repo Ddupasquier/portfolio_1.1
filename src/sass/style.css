@@ -94,21 +94,28 @@ body {
 }
 #container #main-content #about .top-img {
   float: left;
-  width: 20%;
-  margin: auto;
-  aspect-ratio: 2.2/3;
-}
-#container #main-content #about .right {
-  margin-right: 1rem;
+  position: relative;
+  left: -5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 35%;
+  border-radius: 50%;
+  border: grey solid 8px;
+  shape-outside: circle();
 }
 #container #main-content #about .img-right {
   float: right;
-  margin-left: 1rem;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 40%;
-  aspect-ratio: 4.5/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8rem;
+  margin-bottom: 1rem;
+  width: 35%;
+  border-radius: 50%;
+  border: grey solid 8px;
+  shape-outside: circle();
 }
 #container #main-content #about h4 {
   text-align: center;
@@ -122,6 +129,10 @@ body {
   #container #main-content #about p {
     text-align: left;
     text-indent: 1rem;
+  }
+  #container #main-content #about .img-right {
+    margin-left: 4rem;
+    margin-bottom: 1rem;
   }
 }
 #container #main-content #projects {
@@ -160,7 +171,7 @@ body {
   background: rgba(255, 255, 255, 0.61);
   display: none;
 }
-#container #main-content #projects .proj .proj-img:hover > .proj-title {
+#container #main-content #projects .proj .proj:hover > .proj-title {
   display: block;
   -webkit-animation-name: showtitle;
           animation-name: showtitle;
@@ -180,14 +191,14 @@ body {
   background: rgba(255, 255, 255, 0.61);
   display: none;
 }
-#container #main-content #projects .proj .proj-img:hover > .proj-title {
+#container #main-content #projects .proj .proj:hover > .proj-title {
   display: block;
   -webkit-animation-name: showtitle;
           animation-name: showtitle;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
-#container #main-content #projects .proj .proj-img:hover > .proj-tech {
+#container #main-content #projects .proj .proj:hover > .proj-tech {
   display: block;
   -webkit-animation-name: showtech;
           animation-name: showtech;
@@ -248,7 +259,7 @@ body {
     opacity: 1;
   }
 }
-#container #projects .simplestyleimg {
+#container #projects .proj-one {
   position: relative;
   -webkit-animation-name: child1;
           animation-name: child1;
@@ -275,7 +286,7 @@ body {
     opacity: 1;
   }
 }
-#container #projects .pokedeximg {
+#container #projects .proj-two {
   position: relative;
   -webkit-animation-name: child2;
           animation-name: child2;
@@ -302,7 +313,7 @@ body {
     opacity: 1;
   }
 }
-#container #projects .nationalparkimg {
+#container #projects .proj-three {
   position: relative;
   -webkit-animation-name: child3;
           animation-name: child3;
