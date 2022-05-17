@@ -353,7 +353,10 @@ body {
 footer {
   background: rgba(255, 255, 255, 0.788);
   font-family: $mont;
-  padding: 0.5rem;
+  text-align: center;
+  line-height: 2.5;
+  padding: 1rem;
+  width: 100%;
 }
 
 #BG {
