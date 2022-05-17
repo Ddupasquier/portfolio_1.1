@@ -167,15 +167,17 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: black;
+  background: white;
   border: none;
   border-radius: 500px;
-  color: white;
+  color: black;
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   cursor: pointer;
 }
 #container #main-content #projects .proj .proj-button:hover {
   background: #3a3a3a;
+  color: white;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.555);
 }
 #container #main-content #projects .proj .proj-button:active {

@@ -165,15 +165,17 @@ body {
           top: 40%;
           left: 5px;
           width: fit-content;
-          background: black;
+          background: rgb(255, 255, 255);
           border: none;
           border-radius: 500px;
-          color: white;
+          color: rgb(0, 0, 0);
           font-family: $mont;
+          font-weight: bold;
           cursor: pointer;
         }
         .proj-button:hover {
           background: rgb(58, 58, 58);
+          color: white;
           box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.555);
         }
         .proj-button:active {
