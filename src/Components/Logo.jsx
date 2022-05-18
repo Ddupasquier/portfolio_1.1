@@ -3,14 +3,6 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 function Logo() {
-  // function handleToggle() {
-  //   if (showBgAnimation) {
-  //     setShowBgAnimation(false);
-  //   } else {
-  //     setShowBgAnimation(true);
-  //   }
-  // }
-
   return (
     <div id="logo">
       Dylan Dupasquier

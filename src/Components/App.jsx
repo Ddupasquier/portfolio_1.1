@@ -26,7 +26,10 @@ const nextColorIndex = (prevIndex) => (prevIndex + 1) % COLORS.length;
 
 function App() {
   const [colorIndex, setColorIndex] = useState(7);
-  // const [showBgAnimation, setShowBgAnimation] = useState(true);
+  // const [showBgAnimation, toggle] = useReducer(
+  // (showBgAnimation) => !showBgAnimation,
+  // false
+  // );
   const changeBg = () => setColorIndex(nextColorIndex);
 
   return (
@@ -36,7 +39,7 @@ function App() {
       ) : null}
       <Container
         showBgAnimation={showBgAnimation}
-        setShowBgAnimation={setShowBgAnimation}
+        toggle={toggle}
       /> */}
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Container />
