@@ -19,7 +19,7 @@ function ProjSSModal({ onClose }) {
         <img src={SimpleStyles} alt="styles" />
         <br />
         <a
-          href="https://national-parks-fi.herokuapp.com/"
+          href="https://simplestyles.herokuapp.com/"
           target="_blank"
           rel="noreferrer"
         >
