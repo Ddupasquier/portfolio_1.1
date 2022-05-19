@@ -178,11 +178,11 @@ body {
         .proj-button {
           position: relative;
           top: 40%;
-          left: 5px;
+          left: -20px;
           width: fit-content;
           background: rgb(255, 255, 255);
-          border: none;
           border-radius: 500px;
+          border: rgba(255, 255, 255, 0.103) solid 7px;
           color: rgb(0, 0, 0);
           font-family: $mont;
           font-weight: bold;

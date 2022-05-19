@@ -178,13 +178,13 @@ body {
 #container #main-content #projects .proj .proj-button {
   position: relative;
   top: 40%;
-  left: 5px;
+  left: -20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   background: white;
-  border: none;
   border-radius: 500px;
+  border: rgba(255, 255, 255, 0.103) solid 7px;
   color: black;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
