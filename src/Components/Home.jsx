@@ -21,8 +21,6 @@ function Home() {
         </div>
         <section>
           <img src={Photo1} alt="linkedin" className="top-img" />
-          {/* <img src={Photo2} alt="climbing" className="top-img right" /> */}
-
           <p>
             Full-Stack Software Developer with ten years of experience in areas
             of carpentry, plumbing and electrical work. This work has prepared

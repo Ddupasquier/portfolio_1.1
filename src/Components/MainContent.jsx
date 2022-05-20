@@ -7,11 +7,6 @@ import ContactForm from './ContactForm';
 function MainContent() {
   return (
     <div id="main-content">
-      {/* <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<ContactForm />} />
-      </Routes> */}
       <Home />
       <Projects />
       <ContactForm />
