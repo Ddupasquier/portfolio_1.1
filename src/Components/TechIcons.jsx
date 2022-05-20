@@ -1,42 +1,10 @@
 import React from 'react';
-import {
-  reactIcon,
-  cssIcon,
-  scssIcon,
-  jsIcon,
-  htmlIcon,
-  linuxIcon,
-  railsIcon,
-  rubyIcon,
-  postgresIcon,
-  stackIcon,
-  vsIcon,
-  ubuntuIcon,
-  gitIcon,
-  netlifyIcon,
-} from '../assets/index';
+import { icons } from '../assets/tech-svg/techicon';
 
 function TechIcons() {
-  const icons = [
-    reactIcon,
-    cssIcon,
-    scssIcon,
-    jsIcon,
-    htmlIcon,
-    linuxIcon,
-    railsIcon,
-    rubyIcon,
-    postgresIcon,
-    stackIcon,
-    vsIcon,
-    ubuntuIcon,
-    gitIcon,
-    netlifyIcon,
-  ];
-
   const iconImgs = icons.map((icon) => (
     <React.Fragment key={icon}>
-      <img src={icon} alt={icon} />
+      <img src={icon.url} alt={icon} />
       <br />
     </React.Fragment>
   ));
