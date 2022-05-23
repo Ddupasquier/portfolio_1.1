@@ -55,6 +55,7 @@ body {
 }
 #container #social-links .each-social {
   color: black;
+  transition: 0.3s;
 }
 #container #social-links .each-social:hover {
   color: #474747;
@@ -70,6 +71,7 @@ body {
 #container #social-links #nav .each-link {
   color: black;
   text-decoration: none;
+  transition: 0.3s;
 }
 #container #social-links #nav .each-link:hover {
   color: #575757;
@@ -189,11 +191,13 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.2s;
 }
 #container #main-content #projects .proj .proj-button:hover {
   background: #3a3a3a;
   color: white;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.555);
+  transform: scale(1.6);
 }
 #container #main-content #projects .proj .proj-button:active {
   background: #1b1b1b;
@@ -399,6 +403,7 @@ body {
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(50deg, #00ff62, #7700ff);
   background-origin: border-box;
   box-shadow: 2px 1000px 1px #fff inset;
+  transition: 0.3s;
 }
 #contact form .btn19:hover {
   box-shadow: none;
@@ -429,5 +434,6 @@ footer {
   left: 0;
   right: 0;
   z-index: -1000;
+  transition: 1s;
 }
 /*# sourceMappingURL=style.css.map */

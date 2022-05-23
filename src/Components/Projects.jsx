@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import SimpleStyleBg from '../assets/simplestylepause.png';
 import PokedexBg from '../assets/pokedexpause.png';
 import NationalParkBg from '../assets/nationalparkpause.png';
-import ProjSSModal from './ProjSSModal';
-import ProjDexModal from './ProjDexModal';
-import ProjParksModal from './ProjParksModal';
+import ProjSSModal from './ProjSSModal.tsx';
+import ProjDexModal from './ProjDexModal.tsx';
+import ProjParksModal from './ProjParksModal.tsx';
 
 function Projects() {
   const [showStyles, setShowStyles] = useState(false);
@@ -57,7 +57,10 @@ function Projects() {
         </button>
       </div>
 
-      <div style={{ backgroundImage: `url(${PokedexBg})` }} className="proj proj-two">
+      <div
+        style={{ backgroundImage: `url(${PokedexBg})` }}
+        className="proj proj-two"
+      >
         <div className="proj-title">PokeDex</div>
         <div className="proj-tech">TECH: VanillaJs, Html5, CSS3</div>
         <button type="button" className="proj-button" onClick={handleOpenDex}>
