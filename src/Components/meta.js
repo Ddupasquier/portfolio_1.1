@@ -7,9 +7,9 @@ function Meta() {
     <Helmet>
       <meta charSet="utf-8" />
       <title>Dupasquier.dev</title>
-      <meta name="title" content="Dupasquier.dev" />
+      <meta name="og:title" content="Dupasquier.dev" />
       <meta
-        name="description"
+        name="og:description"
         content="This portfolio is where I will be displaying projects as well as providing contact information to perspective employers."
       />
       <link rel="canonical" href={Preview} />
