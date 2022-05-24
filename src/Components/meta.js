@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Preview from '../assets/Untitled.jpg';
+// import Preview from '../assets/Untitled.jpg';
 
 function Meta() {
   return (
