@@ -15,7 +15,7 @@ body {
   grid-template-columns: 50% 50%;
   grid-template-rows: -webkit-fit-content 92%;
   grid-template-rows: fit-content 92%;
-  z-index: 500;
+  z-index: 3;
 }
 #container #logo {
   margin-top: 1.2rem;
@@ -50,7 +50,7 @@ body {
   background: white;
   border-radius: 5px;
   font-size: 5vw;
-  z-index: 1000;
+  z-index: 100;
   text-align: center;
 }
 #container #social-links .each-social {
@@ -83,7 +83,7 @@ body {
 }
 #container #main-content {
   grid-column: span 2;
-  z-index: 500;
+  z-index: 4;
 }
 #container #main-content #about {
   background: rgba(255, 255, 255, 0.644);
@@ -162,7 +162,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   gap: 2rem;
-  z-index: -1000;
+  z-index: -1;
   font-family: "Montserrat", sans-serif;
 }
 #container #main-content #projects .proj {
