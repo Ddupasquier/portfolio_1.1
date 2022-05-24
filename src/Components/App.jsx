@@ -3,7 +3,6 @@ import '../sass/style.css';
 import Container from './Container';
 import BG from './backgroundAnimation/BG';
 import Footer from './Footer';
-import Meta from './meta';
 
 const COLORS = [
   '#680000',
@@ -45,7 +44,6 @@ function App() {
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Container />
       <Footer />
-      <Meta />
     </div>
   );
 }
