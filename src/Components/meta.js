@@ -12,7 +12,7 @@ function Meta() {
         name="og:description"
         content="This portfolio is where I will be displaying projects as well as providing contact information to perspective employers."
       />
-      <link rel="canonical" href={Preview} />
+      <link rel="canonical" href="https://www.dupasquier.dev" />
     </Helmet>
   );
 }
