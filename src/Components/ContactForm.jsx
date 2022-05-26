@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React, { useState } from 'react';
 import { send } from 'emailjs-com';
 
@@ -15,18 +16,28 @@ function ContactForm() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    send(serviceID, templateID, toSend, userID)
-      .then(() => {
-        // eslint-disable-next-line no-alert
-        alert(
-          // eslint-disable-next-line comma-dangle
-          "Thanks for the email! I'll get back to you as soon as possible."
-        );
-      })
-      .catch((err) => {
-        // eslint-disable-next-line no-alert
-        alert('Your email failed to send', err);
-      });
+    if (
+      toSend.from_name === '' ||
+      toSend.reply_to === '' ||
+      toSend.to_name === '' ||
+      toSend.message === ''
+    ) {
+      alert('All fields must be filled out. Thanks.');
+      return;
+    } else {
+      send(serviceID, templateID, toSend, userID)
+        .then(() => {
+          // eslint-disable-next-line no-alert
+          alert(
+            // eslint-disable-next-line comma-dangle
+            "Thanks for the email! I'll get back to you as soon as possible."
+          );
+        })
+        .catch((err) => {
+          // eslint-disable-next-line no-alert
+          alert('Your email failed to send', err);
+        });
+    }
   };
 
   const handleChange = (e) => {
