@@ -14,30 +14,40 @@ function ContactForm() {
   const templateID = 'template_5o9ftxu';
   const userID = 'EcV8iYjkjGTnrhJmE';
 
+  function validateEmail(mail) {
+    if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+    alert('You have entered an invalid email address!');
+    return false;
+  }
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (
       toSend.from_name === '' ||
       toSend.reply_to === '' ||
       toSend.to_name === '' ||
-      toSend.message === ''
+      toSend.message === '' ||
+      validateEmail(toSend.reply_to) === false
     ) {
-      alert('All fields must be filled out. Thanks.');
+      alert(
+        'All fields must be filled out and you must enter a valid email. Thanks.'
+      );
       return;
-    } else {
-      send(serviceID, templateID, toSend, userID)
-        .then(() => {
-          // eslint-disable-next-line no-alert
-          alert(
-            // eslint-disable-next-line comma-dangle
-            "Thanks for the email! I'll get back to you as soon as possible."
-          );
-        })
-        .catch((err) => {
-          // eslint-disable-next-line no-alert
-          alert('Your email failed to send', err);
-        });
     }
+    send(serviceID, templateID, toSend, userID)
+      .then(() => {
+        // eslint-disable-next-line no-alert
+        alert(
+          // eslint-disable-next-line comma-dangle
+          "Thanks for the email! I'll get back to you as soon as possible."
+        );
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-alert
+        alert('Your email failed to send', err);
+      });
   };
 
   const handleChange = (e) => {
