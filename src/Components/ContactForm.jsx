@@ -71,13 +71,13 @@ function ContactForm() {
           value={toSend.reply_to}
           onChange={handleChange}
         />
-        <input
+        {/* <input
           type="text"
           name="to_name"
           placeholder="dylandupasquier@gmail.com"
           value={toSend.to_name}
           onChange={handleChange}
-        />
+        /> */}
         <br />
         <textarea
           type="text"
