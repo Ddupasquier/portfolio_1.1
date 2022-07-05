@@ -12,29 +12,9 @@ function Projects() {
   const [showDex, setShowDex] = useState(false);
   const [showParks, setShowParks] = useState(false);
 
-  function handleOpenStyles() {
-    setShowStyles(true);
-  }
-
-  function handleCloseStyles() {
-    setShowStyles(false);
-  }
-
-  function handleOpenDex() {
-    setShowDex(true);
-  }
-
-  function handleCloseDex() {
-    setShowDex(false);
-  }
-
-  function handleOpenParks() {
-    setShowParks(true);
-  }
-
-  function handleCloseParks() {
-    setShowParks(false);
-  }
+  const handleShowStyles = () => showStyles === true ? setShowStyles(false) : setShowStyles(true);
+  const handleShowDex = () => showDex === true ? setShowDex(false) : setShowDex(true);
+  const handleShowParks = () => showParks === true ? setShowParks(false) : setShowParks(true);
 
   return (
     <div id="projects">
@@ -49,7 +29,7 @@ function Projects() {
         <button
           type="button"
           className="proj-button"
-          onClick={handleOpenStyles}
+          onClick={handleShowStyles}
         >
           More
           <br />
@@ -63,7 +43,7 @@ function Projects() {
       >
         <div className="proj-title">PokeDex</div>
         <div className="proj-tech">TECH: VanillaJs, Html5, CSS3</div>
-        <button type="button" className="proj-button" onClick={handleOpenDex}>
+        <button type="button" className="proj-button" onClick={handleShowDex}>
           More
           <br />
           Info
@@ -78,15 +58,15 @@ function Projects() {
         <div className="proj-tech">
           TECH: React.js, Ruby on Rails, CSS3, HTML5, BCrypt
         </div>
-        <button type="button" className="proj-button" onClick={handleOpenParks}>
+        <button type="button" className="proj-button" onClick={handleShowParks}>
           More
           <br />
           Info
         </button>
       </div>
-      {showStyles ? <ProjSSModal onClose={handleCloseStyles} /> : null}
-      {showDex ? <ProjDexModal onClose={handleCloseDex} /> : null}
-      {showParks ? <ProjParksModal onClose={handleCloseParks} /> : null}
+      {showStyles ? <ProjSSModal onClose={handleShowStyles} /> : null}
+      {showDex ? <ProjDexModal onClose={handleShowDex} /> : null}
+      {showParks ? <ProjParksModal onClose={handleShowParks} /> : null}
     </div>
   );
 }

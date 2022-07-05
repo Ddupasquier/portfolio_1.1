@@ -43,7 +43,7 @@ function App() {
       /> */}
       <BG changeBg={changeBg} color={COLORS[colorIndex]} />
       <Container />
-      <Footer />
+      <Footer />  
     </div>
   );
 }
