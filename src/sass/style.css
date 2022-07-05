@@ -58,7 +58,7 @@ body {
   transition: 0.3s;
 }
 #container #social-links .each-social:hover {
-  color: #474747;
+  color: rgb(71, 71, 71);
 }
 #container #social-links .each-social:nth-child(2) {
   margin-left: 0.5rem;
@@ -69,12 +69,12 @@ body {
   font-family: "Permanent Marker", cursive;
 }
 #container #social-links #nav .each-link {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   transition: 0.3s;
 }
 #container #social-links #nav .each-link:hover {
-  color: #575757;
+  color: rgb(87, 87, 87);
 }
 @media only screen and (max-width: 415px) {
   #container #social-links #nav {
@@ -108,31 +108,46 @@ body {
 }
 #container #main-content #about .tech-icon-container img {
   width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+#container #main-content #about .tech-icon-container img:hover {
+  transform: rotate(360deg);
 }
 #container #main-content #about .top-img {
   float: left;
-  position: relative;
-  left: -5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  width: 35%;
+  height: 20vh;
   border-radius: 50%;
-  border: grey solid 8px;
+  box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
+  outline: 4px solid grey;
+  outline-offset: -3px;
+  margin: 0 auto;
   shape-outside: circle();
+  margin-right: 1.5rem;
+}
+#container #main-content #about .top-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 #container #main-content #about .img-right {
   float: right;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 8rem;
+  margin-left: 4rem;
   margin-bottom: 1rem;
-  width: 35%;
+  height: 20vh;
   border-radius: 50%;
-  border: grey solid 8px;
+  box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.61);
+  outline: 4px solid grey;
+  outline-offset: -3px;
   shape-outside: circle();
+}
+#container #main-content #about .img-right img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 #container #main-content #about h4 {
   text-align: center;
@@ -143,13 +158,12 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 @media only screen and (max-width: 415px) {
+  #container #main-content #about .top-img {
+    margin-bottom: 1rem;
+  }
   #container #main-content #about p {
     text-align: left;
     text-indent: 1rem;
-  }
-  #container #main-content #about .img-right {
-    margin-left: 4rem;
-    margin-bottom: 1rem;
   }
 }
 #container #main-content #projects {
@@ -184,23 +198,23 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 500px;
   border: rgba(255, 255, 255, 0.103) solid 7px;
-  color: black;
+  color: rgb(0, 0, 0);
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
 }
 #container #main-content #projects .proj .proj-button:hover {
-  background: #3a3a3a;
+  background: rgb(58, 58, 58);
   color: white;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.555);
   transform: scale(1.6);
 }
 #container #main-content #projects .proj .proj-button:active {
-  background: #1b1b1b;
+  background: rgb(27, 27, 27);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.555);
 }
 #container #main-content #projects .proj .proj-title {
@@ -372,7 +386,7 @@ body {
   border-radius: 8px;
   height: 20rem;
   width: 80%;
-  color: black;
+  color: rgb(0, 0, 0);
   padding: 1rem;
   margin: 4% auto;
   text-align: center;
