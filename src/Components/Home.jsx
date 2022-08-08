@@ -1,16 +1,17 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import Photo1 from '../assets/circleface.png';
+// import Photo1 from '../assets/circleface.png';
 // import Photo2 from '../assets/climbing.jpg';
-import Photo3 from '../assets/bierschtadt.jpg';
-import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
-import TechIcons from './TechIcons';
+// import Photo3 from '../assets/bierschtadt.jpg';
+// import FlatCert from '../assets/April 2022 Live Grad_Part32.pdf';
+// import TechIcons from './TechIcons';
 
 function Home() {
   return (
-    <div id="about">
-      <div className="about-intro">
+    <div id="about" style={{textAlign: 'center', fontSize: '50px', fontWeight: '800'}}>
+      CURRENTLY UNDER CONSTRUCTION
+      {/* <div className="about-intro">
         <h4>
           <i>Full-Stack React.js & Ruby on Rails Software Developer</i>
         </h4>
@@ -64,7 +65,7 @@ function Home() {
             Netlify.
           </p>
         </section>
-      </div>
+      </div> */}
     </div>
   );
 }

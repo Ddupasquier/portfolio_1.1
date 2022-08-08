@@ -8,8 +8,8 @@ function MainContent() {
   return (
     <div id="main-content">
       <Home />
-      <Projects />
-      <ContactForm />
+      {/* <Projects /> */}
+      {/* <ContactForm /> */}
     </div>
   );
 }

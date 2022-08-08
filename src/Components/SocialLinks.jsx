@@ -2,7 +2,7 @@ import React from 'react';
 import * as SiIcon from 'react-icons/si';
 import * as AiIcon from 'react-icons/ai';
 import Resume from '../assets/Dylan Dupasquier-Resume-Revised-4-28.pdf';
-import Navigation from './Navigation';
+// import Navigation from './Navigation';
 
 function SocialLinks() {
   return (
@@ -32,7 +32,7 @@ function SocialLinks() {
         <AiIcon.AiFillFilePdf />
       </a>
       <br />
-      <Navigation />
+      {/* <Navigation /> */}
     </div>
   );
 }
